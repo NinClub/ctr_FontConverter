@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: F:\Projects\3DS\CTR_SDK\tools\FontConverter\ctr_FontConverter.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08AB875D-95D2-48B5-909B-176172054CD9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>ctr_FontConverter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.2.2.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>NintendoWare.Font</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="FontConverterCommon">
+      <HintPath>lib\FontConverterCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BooleanReverseConverter.cs" />
+    <Compile Include="ColorBrushConverter.cs" />
+    <Compile Include="RadioButtonBooleanConverter.cs" />
+    <Compile Include="DispatcherHelper.cs" />
+    <Compile Include="FileOverwriteConfirmDialog.cs" />
+    <Compile Include="ConvertCancelException.cs" />
+    <Compile Include="StringObservableCollection.cs" />
+    <Compile Include="GlyphGroupFileViewModel.cs" />
+    <Compile Include="InImageView.cs" />
+    <Compile Include="InNitroView.cs" />
+    <Compile Include="Int32RangeRule.cs" />
+    <Compile Include="InWinView.cs" />
+    <Compile Include="NnsFileInfo.cs" />
+    <Compile Include="NnsXmlFile.cs" />
+    <Compile Include="NnsXmlFileList.cs" />
+    <Compile Include="OrderFileListProxy.cs" />
+    <Compile Include="OutImageView.cs" />
+    <Compile Include="OutNitroView.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="TextBoxTraceListener.cs" />
+    <Compile Include="AlternateCharValidationRule.cs" />
+    <Compile Include="BppViewModel.cs" />
+    <Compile Include="CharEncodingViewModel.cs" />
+    <Compile Include="GlyphImageFormatViewModel.cs" />
+    <Compile Include="ImageFileFormatViewModel.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="WorkspaceViewModel.cs" />
+    <Compile Include="SettingViewModel.cs" />
+    <Compile Include="InSettingViewModel.cs" />
+    <Compile Include="InImageViewModel.cs" />
+    <Compile Include="InNitroViewModel.cs" />
+    <Compile Include="InWinViewModel.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="OutSettingViewModel.cs" />
+    <Compile Include="OutImageViewModel.cs" />
+    <Compile Include="OutNitroViewModel.cs" />
+    <Compile Include="ProgressBarViewModel.cs" />
+    <Compile Include="SheetPixelsViewModel.cs" />
+    <Compile Include="WidthTypeViewModel.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="WarningWindow.xaml.cs">
+      <DependentUpon>warningwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>mainwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSelectComboBox.xaml.cs">
+      <DependentUpon>fileselectcombobox.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileDialogButton.xaml.cs">
+      <DependentUpon>filedialogbutton.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>app.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fontconverter.ico" />
+    <Resource Include="resources\fonttype_raster.ico" />
+    <Resource Include="resources\fonttype_vector.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="app.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="filedialogbutton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="fileselectcombobox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="mainwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\inimageview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\innitroview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\inwinview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\outimageview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\outnitroview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="warningwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

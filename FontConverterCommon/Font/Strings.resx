@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IDS_STATUS_LOAD_FILTER" xml:space="preserve">
+    <value>xllt読み込み中...</value>
+  </data>
+  <data name="IDS_ERR_NON_MULTIPLY_HEIGHT" xml:space="preserve">
+    <value>画像の高さ ({0}) が文字順序ファイルで指定される縦方向のブロック数 (={1}) の倍数ではありません。</value>
+  </data>
+  <data name="UsageGlyphWidth1" xml:space="preserve">
+    <value>グリフ幅タイプ: &lt;type&gt;は以下のいずれか</value>
+  </data>
+  <data name="UsageGlyphWidth2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="IDS_ERR_PALEETE_OVER_ENTRY" xml:space="preserve">
+    <value>パレット形式の画像ですがパレットが足りません。</value>
+  </data>
+  <data name="IDS_ERRORTYPE_PARAMETER" xml:space="preserve">
+    <value>入力値エラー</value>
+  </data>
+  <data name="IDS_WARN_CANT_REPRESENT_IN_LOCAL" xml:space="preserve">
+    <value>文字 ('{0}': U+{1:X4}) は指定されたエンコーディングでは扱えない文字です。</value>
+  </data>
+  <data name="IDS_ERR_OUTPUT_FORMAT_NOT_SPECIFIED" xml:space="preserve">
+    <value>出力フォーマットが指定されていません。</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_1024KP" xml:space="preserve">
+    <value>1024 Kピクセル (1024x1024相当)</value>
+  </data>
+  <data name="UsageLinefeed" xml:space="preserve">
+    <value>改行幅</value>
+  </data>
+  <data name="UsageFontBinaryFile" xml:space="preserve">
+    <value>{0}ファイル</value>
+  </data>
+  <data name="IDS_WARN_MULTIPLE_GLYPHS" xml:space="preserve">
+    <value>文字コード ('{0}': U+{1:X4}) には複数のグリフが割り当てられています。2つ目以降のグリフは無視されます。</value>
+  </data>
+  <data name="IDS_ERR_NON_MULTIPLY_WIDTH" xml:space="preserve">
+    <value>画像の幅 ({0}) が文字順序ファイルで指定される横方向のブロック数 (={1}) の倍数ではありません。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SELECTFONT_NEWFONT" xml:space="preserve">
+    <value>Fail to SelectFont(new font).</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_AUTO" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_16KP" xml:space="preserve">
+    <value>16 Kピクセル (128x128相当)</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_32KP" xml:space="preserve">
+    <value>32 Kピクセル (128x256相当)</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_64KP" xml:space="preserve">
+    <value>64 Kピクセル (256x256相当)</value>
+  </data>
+  <data name="IDS_ERR_ALTER_NOT_INCLUDED_LOCAL" xml:space="preserve">
+    <value>指定された代替文字 ('{0}' : 0x{1:X4}) はフォントに含まれていません。</value>
+  </data>
+  <data name="IDS_STATUS_WRITE_TGA_FILE" xml:space="preserve">
+    <value>TGAファイル書き出し中...</value>
+  </data>
+  <data name="IDS_ERR_GROUP_REQUIRE_NAME" xml:space="preserve">
+    <value>グリフグループファイル中の group 要素の中に name 属性を持たないか、空のものがあります。</value>
+  </data>
+  <data name="IDS_ERR_ALTER_TO_LOCAL" xml:space="preserve">
+    <value>指定されたエンコーディングで代替文字 ('{0}': U+{1:X4}) を表現できません。Unicodeを使用するか別の文字を使用してください。</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_IMAGEWIDTH" xml:space="preserve">
+    <value>画像の幅が (={0}) 小さすぎます。最低でも {1} ピクセル以上でなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_IMAGE_EXT" xml:space="preserve">
+    <value>未対応の画像ファイル拡張子です。</value>
+  </data>
+  <data name="IDS_ERR_UNKNONW_OPTION" xml:space="preserve">
+    <value>無効なオプション ({0}) です。</value>
+  </data>
+  <data name="UsageDefaultWidth" xml:space="preserve">
+    <value>デフォルト幅</value>
+  </data>
+  <data name="IDS_ERRORTYPE_XML" xml:space="preserve">
+    <value>XMLエラー</value>
+  </data>
+  <data name="IDS_ERRORTYPE_TGA" xml:space="preserve">
+    <value>TGA画像エラー</value>
+  </data>
+  <data name="IDS_ERRORTYPE_BMP" xml:space="preserve">
+    <value>BMP画像エラー</value>
+  </data>
+  <data name="IDS_ERRORTYPE_FIO" xml:space="preserve">
+    <value>ファイル入出力エラー</value>
+  </data>
+  <data name="UsageEnableLinearInterpolation" xml:space="preserve">
+    <value>線形補間対策処理を行う</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_CELLHEIGHT" xml:space="preserve">
+    <value>セルの高さ (={0}) は 0 より大きくなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_LACK_PARAMETER" xml:space="preserve">
+    <value>オプションのパラメータが不足しています。</value>
+  </data>
+  <data name="IDS_ERR_SEEK_FROM_BEGIN" xml:space="preserve">
+    <value>ファイル ({0}) 先頭からのseekに失敗しました。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_WIDTH_TYPE" xml:space="preserve">
+    <value>幅の指定の種類 (={0}) が不正です。</value>
+  </data>
+  <data name="IDS_WARNING" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="UsageCellBottomMarginWidth" xml:space="preserve">
+    <value>セル下余白</value>
+  </data>
+  <data name="IDS_STATUS_READ_BMP" xml:space="preserve">
+    <value>BMP読み込み中...</value>
+  </data>
+  <data name="IDS_STATUS_READ_WIN" xml:space="preserve">
+    <value>Win読み込み中...</value>
+  </data>
+  <data name="IDS_STATUS_READ_TGA" xml:space="preserve">
+    <value>TGA読み込み中...</value>
+  </data>
+  <data name="IDS_ERROR" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="IDS_STATUS_READ_NITRO" xml:space="preserve">
+    <value>{0}読み込み中...</value>
+  </data>
+  <data name="IDS_ERR_GROUP_NAME_INVALID_CHAR" xml:space="preserve">
+    <value>グリフグループファイル中の group 要素の name 属性(={0})が不正な文字(={1})を含んでいます。</value>
+  </data>
+  <data name="IDS_STATUS_CANCELED" xml:space="preserve">
+    <value>キャンセルされました</value>
+  </data>
+  <data name="IDS_ERR_OVER_MEMORY" xml:space="preserve">
+    <value>メモリが足りません。(出力データサイズが大きすぎる可能性があります)</value>
+  </data>
+  <data name="IDS_MSG_OVERWRITE_FILE" xml:space="preserve">
+    <value>ファイル "{0}" は既に存在します。
+上書きしますか？</value>
+  </data>
+  <data name="UsageCharacterOrderFile" xml:space="preserve">
+    <value>文字順序ファイル</value>
+  </data>
+  <data name="IDS_ERR_INVALID_BMP_FILE" xml:space="preserve">
+    <value>BMPファイルとして指定されたファイルは ({0}) BMPファイルではありません。</value>
+  </data>
+  <data name="IDS_ERR_REQUIRE_INPUT_FORMAT" xml:space="preserve">
+    <value>入力フォーマット(-i)が指定されていません</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_HORIZONTAL_INFO" xml:space="preserve">
+    <value>フォント幅を表すピクセルが異常です。</value>
+  </data>
+  <data name="IDS_WARN_OVER_DRAW_MARGIN" xml:space="preserve">
+    <value>画像中のピクセル座標 ({0},{1}) 付近のマージン領域にはみ出している場所があります。</value>
+  </data>
+  <data name="IDS_ERR_GROUP_NOT_SELECTED" xml:space="preserve">
+    <value>グリフグループが選択されていません</value>
+  </data>
+  <data name="IDS_STATUS_LOAD_ORDER" xml:space="preserve">
+    <value>xlor読み込み中...</value>
+  </data>
+  <data name="IDS_ERRORTYPE_CMDLINE" xml:space="preserve">
+    <value>コマンドラインエラー</value>
+  </data>
+  <data name="UsageImageFileFormat2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="UsageImageFileFormat1" xml:space="preserve">
+    <value>出力画像形式: &lt;format&gt;は以下のいずれか</value>
+  </data>
+  <data name="IDS_ERR_TGA_UNSUPPORTED_BPP" xml:space="preserve">
+    <value>未対応のbppです(image type={0}, pixel depth={1})。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_SHEETPIXELS" xml:space="preserve">
+    <value>不正なシートサイズです。({0} pixels).</value>
+  </data>
+  <data name="IDS_ERR_NO_FORMAT" xml:space="preserve">
+    <value>階調数が指定されていません。</value>
+  </data>
+  <data name="UsageGridColor" xml:space="preserve">
+    <value>グリッド色</value>
+  </data>
+  <data name="IDS_ERR_REQUIRE_OUTPUT_FORMAT" xml:space="preserve">
+    <value>出力フォーマット(-o)が指定されていません</value>
+  </data>
+  <data name="UsageOutputFormat" xml:space="preserve">
+    <value>&lt;out_fmt&gt; は {0} のどちらか</value>
+  </data>
+  <data name="IDS_STATUS_PREPAIR" xml:space="preserve">
+    <value>準備中...</value>
+  </data>
+  <data name="IDS_WARN_OW_OH_OB" xml:space="preserve">
+    <value>-ow または -oh オプションが指定されたので -ob オプションは無視されます。</value>
+  </data>
+  <data name="IDS_WARN_OW_OH_OR" xml:space="preserve">
+    <value>-ow または -oh オプションが指定されたので -or オプションは無視されます。</value>
+  </data>
+  <data name="IDS_ERR_USE_FILTER_BUT_NO_FILTER" xml:space="preserve">
+    <value>「フィルタを使用する」にチェックがつけられていますが、文字フィルタファイルのパスが指定されていません。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_ORDER_HEIGHT" xml:space="preserve">
+    <value>文字順序ファイル中の height 属性が不正な値 (={0}) になっています。</value>
+  </data>
+  <data name="DisplayNameCharacterEncodingOld" xml:space="preserve">
+    <value>エンコーディング:</value>
+  </data>
+  <data name="IDS_ERR_FILE_NOT_EXISTS" xml:space="preserve">
+    <value>指定されたファイル ({0}) は存在しません。</value>
+  </data>
+  <data name="IDS_ERR_MULTIPLE_ORDER_LETTER" xml:space="preserve">
+    <value>文字順序ファイル中に同じ文字(U+{0:X4}: {1})が多重に定義されています。</value>
+  </data>
+  <data name="IDS_ERRORTYPE_IMAGE" xml:space="preserve">
+    <value>画像ファイルエラー</value>
+  </data>
+  <data name="StrCharacterCode" xml:space="preserve">
+    <value>文字コード</value>
+  </data>
+  <data name="IDS_ERR_NO_BASELINE" xml:space="preserve">
+    <value>画像にベースライン位置を表す点が含まれていません。</value>
+  </data>
+  <data name="UsageCellRightMarginWidth" xml:space="preserve">
+    <value>セル右余白</value>
+  </data>
+  <data name="IDS_STATUS_FINISH" xml:space="preserve">
+    <value>変換完了</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_VERTICAL_INFO" xml:space="preserve">
+    <value>アセント、ディセントを表すピクセルが異常です。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SELECTOBJECT_OLDFONT" xml:space="preserve">
+    <value>Fail to SelectObject(old font).</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_WIDTH_TYPE" xml:space="preserve">
+    <value>無効な文字幅種別({0})です。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SELECTOBJECT_OLDBMP" xml:space="preserve">
+    <value>Fail to SelectObject(old bmp).</value>
+  </data>
+  <data name="UsageAverageWidth" xml:space="preserve">
+    <value>平均幅</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_128KP" xml:space="preserve">
+    <value>128 Kピクセル (256x512相当)</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_256KP" xml:space="preserve">
+    <value>256 Kピクセル (512x512相当)</value>
+  </data>
+  <data name="IDS_OUTNITRO_SHEETPIXELS_512KP" xml:space="preserve">
+    <value>512 Kピクセル (512x1024相当)</value>
+  </data>
+  <data name="DisplayNameCharacterEncoding" xml:space="preserve">
+    <value>文字コード:</value>
+  </data>
+  <data name="IDS_WARN_NON_WHITE_NULL" xml:space="preserve">
+    <value>画像中のピクセル座標 ({0}, {1}) のセルは文字順序ファイル ({2}) で &lt;null/&gt; と指定されていますが、セルに2色以上の色が含まれています。</value>
+  </data>
+  <data name="IDS_ERR_ALTER_TO_UNICODE" xml:space="preserve">
+    <value>指定された代替文字 (0x{0:X4}) はUnicodeで表現できません。別の文字を使用してください。</value>
+  </data>
+  <data name="IDS_INWIN_WIDTHTYPE_FIXED_WIDTH" xml:space="preserve">
+    <value>全ての文字で同じ幅を使用する</value>
+  </data>
+  <data name="IDS_ERR_CANT_WRITE" xml:space="preserve">
+    <value>指定されたファイル ({0}) へ書き込みできません。</value>
+  </data>
+  <data name="UsageInputFormat" xml:space="preserve">
+    <value>&lt;in_fmt&gt; は {0} のいずれか</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SELECTOBJECT_NEWBMP" xml:space="preserve">
+    <value>Fail to SelectObject(new bmp).</value>
+  </data>
+  <data name="UsageNullCellColor" xml:space="preserve">
+    <value>&lt;null/&gt;セル色</value>
+  </data>
+  <data name="IDS_INWIN_WIDTHTYPE_GLYPH_ONLY" xml:space="preserve">
+    <value>グリフ幅を文字幅とする</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_INPUT_FORMAT" xml:space="preserve">
+    <value>無効な入力フォーマット ({0}) です。</value>
+  </data>
+  <data name="UsageCellHeight" xml:space="preserve">
+    <value>セル高さ</value>
+  </data>
+  <data name="IDS_ERR_INVALID_FONT_FILE" xml:space="preserve">
+    <value>{0} ファイルとして指定されたファイルは {0} ファイルではありません。</value>
+  </data>
+  <data name="StrEncoding" xml:space="preserve">
+    <value>エンコーディング</value>
+  </data>
+  <data name="IDS_ERR_TAG_MUST_BE_IN" xml:space="preserve">
+    <value>タグ &lt;{0}&gt; はタグ &lt;{1}&gt; の内部でなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_ORDER_NOT_SELECTED" xml:space="preserve">
+    <value>文字順序ファイルが選択されていません。</value>
+  </data>
+  <data name="IDS_MSG_OVERWRITE_FILE_TITLE" xml:space="preserve">
+    <value>ファイルの上書き</value>
+  </data>
+  <data name="IDS_ERR_FILE_IS_DIRECTORY" xml:space="preserve">
+    <value>指定されたパス ({0}) はディレクトリです。</value>
+  </data>
+  <data name="IDS_INWIN_WIDTHTYPE_INCLUDE_MARGIN" xml:space="preserve">
+    <value>フォントで指定される文字幅を使用する</value>
+  </data>
+  <data name="IDS_ERR_UNSUPPORTED_VERSION" xml:space="preserve">
+    <value>対応していないバージョン (={1}) の {0} です。サポートしているバージョンは {2} です。</value>
+  </data>
+  <data name="UsageGlhphGroupFile" xml:space="preserve">
+    <value>グリフグループファイル</value>
+  </data>
+  <data name="UIStringDefault" xml:space="preserve">
+    <value>{0} - (既定)</value>
+  </data>
+  <data name="IDS_ERROR_MSG" xml:space="preserve">
+    <value>エラー: {0}
+</value>
+  </data>
+  <data name="IDS_ERR_FAIL_GETDIBITS" xml:space="preserve">
+    <value>Fail to GetDIBits.</value>
+  </data>
+  <data name="IDS_ERR_PALETTE_NO_ENTRY" xml:space="preserve">
+    <value>パレット形式の画像ですがパレットサイズが0です。</value>
+  </data>
+  <data name="UsageDontDrawGrid" xml:space="preserve">
+    <value>グリッドを描画しない</value>
+  </data>
+  <data name="IDS_ERRORTYPE_NULL" xml:space="preserve">
+    <value>未知のエラー</value>
+  </data>
+  <data name="IDS_ERRORTYPE_FONT" xml:space="preserve">
+    <value>ランタイムフォントエラー</value>
+  </data>
+  <data name="ErrorNumberRange" xml:space="preserve">
+    <value>{0} - {1}の範囲で入力してください。</value>
+  </data>
+  <data name="UsageUseSoftAntialias" xml:space="preserve">
+    <value>ソフトアンチエイリアスを使用する</value>
+  </data>
+  <data name="IDS_INWIN_FORMAT_I8" xml:space="preserve">
+    <value>64階調 ({0}8)</value>
+  </data>
+  <data name="IDS_INWIN_FORMAT_I1" xml:space="preserve">
+    <value>2階調 ({0}4)</value>
+  </data>
+  <data name="IDS_INWIN_FORMAT_I4" xml:space="preserve">
+    <value>16階調 ({0}4)</value>
+  </data>
+  <data name="IDS_ERR_GROUP_INDEX" xml:space="preserve">
+    <value>グリフグループファイル中の group 要素に index 属性を持つものと持たないものが混在しています。</value>
+  </data>
+  <data name="UsageTitile" xml:space="preserve">
+    <value>使用法:</value>
+  </data>
+  <data name="IDS_ERR_SAX_MSG" xml:space="preserve">
+    <value>{0} : {1} 行 {2} 列目
+
+ {3}
+</value>
+  </data>
+  <data name="IDS_ERR_FILTER_NOT_EXISTS" xml:space="preserve">
+    <value>フィルタファイル ({0}) が存在しません。</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_HYPHON" xml:space="preserve">
+    <value>無意味なハイフンが含まれています。</value>
+  </data>
+  <data name="IDS_ERR_FILE_IS_READONLY" xml:space="preserve">
+    <value>指定されたファイル ({0}) は読み込み専用になっています。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_CREATEFONT" xml:space="preserve">
+    <value>Fail to create font.</value>
+  </data>
+  <data name="IDS_WARN_OVERMAX_LINEFEED" xml:space="preserve">
+    <value>改行幅 (={0}) が上限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_IMAGE_FORMAT_INT" xml:space="preserve">
+    <value>不正な画像形式指定({0})です。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_IMAGE_FORMAT_STR" xml:space="preserve">
+    <value>不正な画像形式指定({0})です。</value>
+  </data>
+  <data name="IDS_ERR_OVERMAX_GLYPHWIDTH" xml:space="preserve">
+    <value>グリフ幅 (={0}) が上限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_ERR_BMP_UNSUPPORTED_BPP" xml:space="preserve">
+    <value>指定された BMP ファイル ({0}) の階調数 (={1} bpp) はサポートされていません。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_GROUP_FILE" xml:space="preserve">
+    <value>グリフグループファイルとして指定されたファイルはグリフグループファイルではありません。</value>
+  </data>
+  <data name="IDS_ERR_XERCESC_UNKNOWN" xml:space="preserve">
+    <value>未知のエラーです。</value>
+  </data>
+  <data name="UsageFixedWidth" xml:space="preserve">
+    <value>グリフ幅タイプが fixed の場合のグリフ幅</value>
+  </data>
+  <data name="IDS_ERR_FAIL_GETCURRENTDIRECTORY" xml:space="preserve">
+    <value>Fail to GetCurrentDirectory.</value>
+  </data>
+  <data name="IDS_ERR_INVALID_SHEET_SIZE" xml:space="preserve">
+    <value>無効なシートサイズ({0}x{1})です。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_ALTER" xml:space="preserve">
+    <value>使用できない代替文字 (0x0000) です。</value>
+  </data>
+  <data name="IDS_ERR_WIN32_EXCEPTION" xml:space="preserve">
+    <value>WIN32 Exception: code=0x{0:X8} address=0x{1:X8}</value>
+  </data>
+  <data name="ErrorAlternateCharFormat" xml:space="preserve">
+    <value>代替文字1文字、または文字コード(16進数2～4桁)で入力してください。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_ENCODING" xml:space="preserve">
+    <value>無効な文字列エンコーディング ({0}) です。</value>
+  </data>
+  <data name="IDS_ERR_OVERMAX_MAXCHARWIDTH" xml:space="preserve">
+    <value>文字幅 (={0}) が上限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_WARN_OLD_FORAMT" xml:space="preserve">
+    <value>入力の {0} ファイルは旧バージョンのフォーマットです。変換後は新フォーマットになります。</value>
+  </data>
+  <data name="IDS_ERR_FILE_NOT_SPECIFIED" xml:space="preserve">
+    <value>ファイルが指定されていません。</value>
+  </data>
+  <data name="IDS_ERR_FONT_SIZE_NOT_SPECIFIED" xml:space="preserve">
+    <value>フォントサイズが指定されていません。</value>
+  </data>
+  <data name="UsageCellWidth" xml:space="preserve">
+    <value>セル幅</value>
+  </data>
+  <data name="IDS_ERROR_HR" xml:space="preserve">
+    <value>---------------------- エラー ------------------- </value>
+  </data>
+  <data name="IDS_ERR_TYPE0" xml:space="preserve">
+    <value>タイプ 0 の内部エラーです。</value>
+  </data>
+  <data name="IDS_ERR_TGA_UNSUPPORTED_PALETTE_ENTRY" xml:space="preserve">
+    <value>未対応のパレットデータ形式です(color map entry size={0})。</value>
+  </data>
+  <data name="UsageCharacterEncoding2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="UsageCharacterEncoding1" xml:space="preserve">
+    <value>対応{0}: &lt;encoding&gt;は以下のいずれか</value>
+  </data>
+  <data name="UsageOptionPatterns" xml:space="preserve">
+    <value>&lt;{0}&gt;は&lt;{1}&gt;に応じて以下があります。</value>
+  </data>
+  <data name="UsageWidthLineColor" xml:space="preserve">
+    <value>幅線色</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_IMAGEHEIGHT" xml:space="preserve">
+    <value>画像の高さ (={0}) が小さすぎます。最低でも {1} ピクセル以上でなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_CREATECOMPATIBLEDC" xml:space="preserve">
+    <value>Fail to CreateCompatibleDC.</value>
+  </data>
+  <data name="IDS_WARN_OVERMAX_WARNING" xml:space="preserve">
+    <value>=== 警告の数が上限を超えたため以降の警告は表示されません。===</value>
+  </data>
+  <data name="IDS_ERR_FAIL_GETTEXTMETRICS" xml:space="preserve">
+    <value>Fail to GetTextMetrics.</value>
+  </data>
+  <data name="IDS_ERR_TGA_OVER_SIZE" xml:space="preserve">
+    <value>TGAファイルの最大サイズ(65535 x 65335)を超えてしまいます({0} x {1})。</value>
+  </data>
+  <data name="IDS_EXEC_BUTTON_CONVERTING" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_FIXEDWIDTH" xml:space="preserve">
+    <value>無効な文字幅 (={0}) です。</value>
+  </data>
+  <data name="IDS_LICENSE_WARNING_MSG" xml:space="preserve">
+    <value>各フォントの利用にはフォントのライセンスが必要です。
+ゲームソフトごとに適切なライセンスを取得してください。
+
+fontcvtr および Nintendo Ware for {0} にはいかなるフォントのライセンスも付属しません。</value>
+  </data>
+  <data name="UsageCharacterFilterFile" xml:space="preserve">
+    <value>文字フィルタファイル</value>
+  </data>
+  <data name="IDS_ERR_OVERMAX_BASELINEPOS" xml:space="preserve">
+    <value>ベースライン位置 (={0}) が上限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_DEFAULTRIGHTSPACE" xml:space="preserve">
+    <value>デフォルト右スペース幅 (={0}) が有効範囲 [{1} ～ {2}] を超えています。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_CREATECOMPATIBLEBITMAP" xml:space="preserve">
+    <value>Fail to CreateCompatibleBitmap.</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_FORMAT_SYNTAX" xml:space="preserve">
+    <value>無効な階調数指定({0})です。</value>
+  </data>
+  <data name="UsageAlternateCharacter" xml:space="preserve">
+    <value>代替文字</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_ALPHABPP" xml:space="preserve">
+    <value>アルファ階調数 (={0}) が有効範囲を超えています。</value>
+  </data>
+  <data name="IDS_ERR_TGA_UNSUPPORTED_IMAGE_DESC" xml:space="preserve">
+    <value>未対応のTGAオプションです(image descriptor={0:X2})。</value>
+  </data>
+  <data name="IDS_ERR_TGA_UNSUPPORTED_IMAGE_TYPE" xml:space="preserve">
+    <value>この形式のTGAファイルは未対応です(image type={0})。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_OUTPUT_FORMAT" xml:space="preserve">
+    <value>無効な出力フォーマット ({0}) です。</value>
+  </data>
+  <data name="IDS_LICENSE_WARNING_TITLE" xml:space="preserve">
+    <value>ライセンスの警告</value>
+  </data>
+  <data name="UsageTextureFormat1" xml:space="preserve">
+    <value>テクスチャフォーマット: &lt;format&gt;は以下のいずれか</value>
+  </data>
+  <data name="UsageTextureFormat2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_COLOR_FORMAT" xml:space="preserve">
+    <value>色指定({0})の書式が不正です。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_SHEET_SIZE_FORMAT" xml:space="preserve">
+    <value>不正なシートサイズ指定フォーマットです。</value>
+  </data>
+  <data name="IDS_STATUS_WRITE_NITRO" xml:space="preserve">
+    <value>{0}作成中...</value>
+  </data>
+  <data name="IDS_ERR_UNEXPECTED_HEADER_SIZE" xml:space="preserve">
+    <value>{0} ファイルのヘッダサイズ (={1}) が不正です。{2} でなければなりません。</value>
+  </data>
+  <data name="UsageCellTopMarginWidth" xml:space="preserve">
+    <value>セル上余白</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_DEFAULTWIDTH" xml:space="preserve">
+    <value>デフォルトグリフ幅 (={0}) が有効範囲 [{1} ～ {2}] を超えています。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_INPUT_IMAGE_DETECTION" xml:space="preserve">
+    <value>入力画像ファイルの自動形式判定に失敗しました。
+未対応形式の可能性があります。</value>
+  </data>
+  <data name="UsageFontSize" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="UsageFontName" xml:space="preserve">
+    <value>フォント名</value>
+  </data>
+  <data name="IDS_ERRORTYPE_INTERNAL" xml:space="preserve">
+    <value>内部エラー</value>
+  </data>
+  <data name="IDS_ERR_FAIL_TEXTOUT" xml:space="preserve">
+    <value>Fail to TextOut.</value>
+  </data>
+  <data name="UsageInputCase" xml:space="preserve">
+    <value>{0} の場合</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_CELLWIDTH" xml:space="preserve">
+    <value>セルの幅 (={0}) は 0 より大きくなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_TGA_UNSUPPORTED_ALPHA" xml:space="preserve">
+    <value>未対応のアルファ深度です(image descriptor={0:d2})。</value>
+  </data>
+  <data name="IDS_ERR_DIRECTORY_NOT_EXISTS" xml:space="preserve">
+    <value>指定されたディレクトリ ({0}) は存在しません。</value>
+  </data>
+  <data name="IDS_ERR_UNSUPPORTED_BMP" xml:space="preserve">
+    <value>指定された BMP ファイル ({0}) はサポートされないフォーマットです。</value>
+  </data>
+  <data name="IDS_ERR_FONT_NOT_SPECIFIED" xml:space="preserve">
+    <value>フォントが選択されていません。</value>
+  </data>
+  <data name="IDS_WARN_FONT_FILTER_MISMATCH" xml:space="preserve">
+    <value>文字 ('{0}': U+{1:X4}) はフィルタでは出力するように指定されていますが、入力に含まれていないため出力されません。</value>
+  </data>
+  <data name="IDS_ERR_SEEK_FROM_END" xml:space="preserve">
+    <value>ファイル ({0}) 末尾からのseekに失敗しました。</value>
+  </data>
+  <data name="UsageKPixelUnitSheetSize" xml:space="preserve">
+    <value>キロピクセル単位のシートサイズ</value>
+  </data>
+  <data name="IDS_ERR_GROUP_INDEX_DUPLICATE" xml:space="preserve">
+    <value>グリフグループファイル中の group 要素の index 属性(={0})の値が多重に使用されています。</value>
+  </data>
+  <data name="IDS_INWIN_WIDTHTYPE_GLYPH_ONLY_KEEPSP" xml:space="preserve">
+    <value>グリフ幅を使用する (空白文字の保護)</value>
+  </data>
+  <data name="IDS_NOW_READING" xml:space="preserve">
+    <value>読み込み中です。しばらくお待ちください。</value>
+  </data>
+  <data name="UsageDefaultRightSpace" xml:space="preserve">
+    <value>デフォルト右スペース</value>
+  </data>
+  <data name="IDS_ERR_OVERMAX_FONTHEIGHT" xml:space="preserve">
+    <value>文字の高さ (={0}) が上限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_IMAGE_SIZE" xml:space="preserve">
+    <value>指定された画像ファイル ({0}) の画像サイズが異常です。({1} x {2}).</value>
+  </data>
+  <data name="IDS_ERR_INVALID_ORDER_FILE" xml:space="preserve">
+    <value>文字順序ファイルとして指定されたファイルは文字順序ファイルではありません。</value>
+  </data>
+  <data name="IDS_ERR_UNSUPPORTED_VERTICAL_INFO" xml:space="preserve">
+    <value>セルサイズが6ピクセル以下ではアセント、ディセントを指定できません。</value>
+  </data>
+  <data name="IDS_ERR_SEEK_FROM_CURRENT" xml:space="preserve">
+    <value>ファイル ({0}) 現在位置からのseekに失敗しました。</value>
+  </data>
+  <data name="UsageImageFile" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="IDS_ERR_ENCODING_NOT_SELECTED" xml:space="preserve">
+    <value>出力のエンコーディングが選択されていません。</value>
+  </data>
+  <data name="UsageBmpFile" xml:space="preserve">
+    <value>BMPファイル</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SAVEDC" xml:space="preserve">
+    <value>Fail to SaveDC.</value>
+  </data>
+  <data name="IDS_WARN_ONE_ALPHA" xml:space="preserve">
+    <value>アルファチャンネルがありますが全て同じ値になっています。アルファチャンネルを無視します。</value>
+  </data>
+  <data name="UsageDefaultLeftSpace" xml:space="preserve">
+    <value>デフォルト左スペース</value>
+  </data>
+  <data name="IDS_ERR_INVALID_ORDER_WIDTH" xml:space="preserve">
+    <value>文字順序ファイル中の width 属性が不正な値 (={0}) になっています。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_CREATEDC" xml:space="preserve">
+    <value>Fail to CreateDC.</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_EXCEPTION" xml:space="preserve">
+    <value>未知の例外が発生しました。</value>
+  </data>
+  <data name="IDS_WARN_NO_GLYPH_ORDER" xml:space="preserve">
+    <value>文字順序ファイルが見つからなかったため画像ファイルを変換の入出力に使う事は出来ません。</value>
+  </data>
+  <data name="IDS_OUTIMAGE_FORMAT_EXT" xml:space="preserve">
+    <value>拡張子で指定</value>
+  </data>
+  <data name="IDS_OUTIMAGE_FORMAT_BMP" xml:space="preserve">
+    <value>BMP形式</value>
+  </data>
+  <data name="IDS_OUTIMAGE_FORMAT_TGA" xml:space="preserve">
+    <value>TGA形式</value>
+  </data>
+  <data name="IDS_STATUS_ERROR" xml:space="preserve">
+    <value>変換エラー</value>
+  </data>
+  <data name="UsageMarginColor" xml:space="preserve">
+    <value>余白色</value>
+  </data>
+  <data name="IDS_ERR_FIXED_WIDTH_NOT_SPECIFIED" xml:space="preserve">
+    <value>「文字幅」が指定されていません。</value>
+  </data>
+  <data name="IDS_ERR_UNKNOWN_OPTION_TYPE" xml:space="preserve">
+    <value>無効なオプションタイプ ({0}) です。</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_COLORBPP" xml:space="preserve">
+    <value>カラー階調数 (={0}) が有効範囲を超えています。</value>
+  </data>
+  <data name="IDS_ERR_REQUIRE_PALETTE" xml:space="preserve">
+    <value>パレット形式の画像ですがパレットデータがありません。</value>
+  </data>
+  <data name="IDS_ERR_INVALID_FILTER_FILE" xml:space="preserve">
+    <value>文字フィルタファイルとして指定されたファイルは文字フィルタファイルではありません。</value>
+  </data>
+  <data name="IDS_ERR_UNKNONW_COLOR_FORMAT" xml:space="preserve">
+    <value>無効なカラーフォーマット ({0}) です。</value>
+  </data>
+  <data name="IDS_STATUS_WRITE_BMP_FILE" xml:space="preserve">
+    <value>BMPファイル書き出し中...</value>
+  </data>
+  <data name="IDS_ERR_XERCESC_MSG" xml:space="preserve">
+    <value> {0}</value>
+  </data>
+  <data name="IDS_ERR_ILLEGAL_BPP_PAIR" xml:space="preserve">
+    <value>カラー階調数、アルファ諧調数に共に 0 が指定されています。</value>
+  </data>
+  <data name="IDS_ERR_FAIL_SELECTOBJECT_NEWFONT" xml:space="preserve">
+    <value>Fail to SlectObject(new font).</value>
+  </data>
+  <data name="IDS_WARNING_MSG" xml:space="preserve">
+    <value>警告: </value>
+  </data>
+  <data name="IDS_ERR_NO_GLYPH" xml:space="preserve">
+    <value>出力すべき文字が1文字もありません。</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_DEFAULTLEFTSPACE" xml:space="preserve">
+    <value>デフォルト左スペース幅 (={0}) が有効範囲 [{1} ～ {2}] を超えています。</value>
+  </data>
+  <data name="UsageCellLeftMarginWidth" xml:space="preserve">
+    <value>セル左余白</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_BASELINEPOS" xml:space="preserve">
+    <value>ベースライン位置 (={0}) が下限 (={1}) を超えています。</value>
+  </data>
+  <data name="IDS_ERR_VERSION_MISMATCH" xml:space="preserve">
+    <value>{0} のバージョンが異なります。{1} と指定されていますが {2} でなければなりません。</value>
+  </data>
+  <data name="IDS_ERR_ALTER_NOT_INCLUDED_UNICODE" xml:space="preserve">
+    <value>指定された代替文字 ('{0}' : U+{1:X4}) はフォントに含まれていません。</value>
+  </data>
+  <data name="IDS_ERR_TOO_FEW_BLOCKS" xml:space="preserve">
+    <value>バイナリブロック数 (={0}) が少なすぎます。</value>
+  </data>
+  <data name="IDS_ERR_CANT_TELL" xml:space="preserve">
+    <value>ファイル({0})の位置取得に失敗しました。</value>
+  </data>
+  <data name="IDS_ERR_CANT_READ" xml:space="preserve">
+    <value>指定されたファイル ({0}) から読み取れません。</value>
+  </data>
+  <data name="IDS_ERR_CANT_OPEN" xml:space="preserve">
+    <value>指定されたファイル ({0}) を開けません。</value>
+  </data>
+  <data name="IDS_ERR_MULTI_WIDTHLINE" xml:space="preserve">
+    <value>ピクセル座標 ({0}, {1}) のセルに幅線が複数あります。</value>
+  </data>
+  <data name="IDS_ERR_OUTOFRANGE_LINEHEIGHT" xml:space="preserve">
+    <value>改行幅 (={0}) が有効範囲 [{1} ～ {2}] を超えています。</value>
+  </data>
+  <data name="IDS_WARN_CANT_REPRESETN_IN_UNICODE" xml:space="preserve">
+    <value>文字 (0x{0:X4}) はUnicodeで扱えない文字です。</value>
+  </data>
+  <data name="IDS_STATUS_WRITE_BMP" xml:space="preserve">
+    <value>BMP作成中...</value>
+  </data>
+  <data name="IDS_STATUS_WRITE_TGA" xml:space="preserve">
+    <value>TGA作成中...</value>
+  </data>
+  <data name="IDS_ERR_NO_COLOR_FORMAT" xml:space="preserve">
+    <value>カラーフォーマットが指定されていません。</value>
+  </data>
+  <data name="IDS_EXEC_BUTTON_DEFAULT" xml:space="preserve">
+    <value>変換</value>
+  </data>
+  <data name="IDS_ERR_FONT_NOT_EXISTS" xml:space="preserve">
+    <value>指定されたフォント名(={0})に該当するフォントが存在しません。</value>
+  </data>
+  <data name="IDS_STATUS_INITIAL" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="IDS_ERR_UNDERMIN_FONTSIZE" xml:space="preserve">
+    <value>無効なフォントサイズ  (={0}) です。</value>
+  </data>
+  <data name="IDS_DEFAULT_GROUPS" xml:space="preserve">
+    <value>なし</value>
+  </data>
+</root>

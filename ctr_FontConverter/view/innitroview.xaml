@@ -1,0 +1,36 @@
+<c:InNitroView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:c="clr-namespace:NintendoWare.Font"
+               x:Uid="UserControl_1">
+  <FrameworkElement.Resources>
+    <Style x:Key="commonStyle" x:Uid="Style_1" TargetType="{x:Type FrameworkElement}">
+      <Setter x:Uid="Setter_1" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="comboBoxStyle" x:Uid="Style_2" TargetType="{x:Type ComboBox}"
+           BasedOn="{StaticResource commonStyle}">
+      <Setter x:Uid="Setter_2" Property="Control.Padding" Value="3"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_1">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Label x:Uid="Label_1" Grid.Row="0" Grid.Column="0" Style="{StaticResource commonStyle}" Margin="4"
+           Content="入力ファイル:"/>
+    <c:FileSelectComboBox x:Name="IDC_IN_NITRO_PATH" x:Uid="IDC_IN_NITRO_PATH" Grid.Row="0" Grid.Column="1"
+                          Style="{StaticResource commonStyle}" Margin="4"
+                          CurrentPath="{Binding Path=CurrentPath, Mode=TwoWay}">
+      <c:FileSelectComboBox.PathHistory>
+        <Binding Path="PathHistory"/>
+      </c:FileSelectComboBox.PathHistory>
+    </c:FileSelectComboBox>
+    <c:FileDialogButton x:Uid="c:FileDialogButton_1" Grid.Row="0" Grid.Column="2" Style="{StaticResource commonStyle}"
+                        Margin="4" FilePath="{Binding ElementName=IDC_IN_NITRO_PATH, Path=CurrentPath, Mode=TwoWay}"
+                        FileFilter="{Binding Path=FileFilter}" FileExtension="{Binding Path=FileExtension}"/>
+  </Grid>
+</c:InNitroView>

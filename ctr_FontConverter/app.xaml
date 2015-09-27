@@ -1,0 +1,10 @@
+<c:App xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:c="clr-namespace:NintendoWare.Font"
+       x:Uid="Application_1">
+  <Application.Resources>
+    <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type c:NnsFileInfo}">
+      <TextBlock x:Uid="TextBlock_1" Text="{Binding Path=Title}"/>
+    </DataTemplate>
+  </Application.Resources>
+</c:App>

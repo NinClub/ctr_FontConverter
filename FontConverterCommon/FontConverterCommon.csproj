@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: F:\Projects\3DS\CTR_SDK\tools\FontConverter\FontConverterCommon.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1815AB5-1F74-46B5-87AE-E88B5C355A46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>FontConverterCommon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.2.2.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>NintendoWare</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Font\PixelPos.cs" />
+    <Compile Include="Font\IPixelPicker.cs" />
+    <Compile Include="Font\PixelPickerRvl.cs" />
+    <Compile Include="Font\PixelPickerCtr.cs" />
+    <Compile Include="Font\PixelPickerCreater.cs" />
+    <Compile Include="Font\BinaryFile.cs" />
+    <Compile Include="Font\BitmapFile.cs" />
+    <Compile Include="Font\BitReader.cs" />
+    <Compile Include="Font\BitWriter.cs" />
+    <Compile Include="Font\ImageFileFormat.cs" />
+    <Compile Include="Font\FB.cs" />
+    <Compile Include="Font\ByteOrderBinaryReader.cs" />
+    <Compile Include="Font\ByteOrderBinaryWriter.cs" />
+    <Compile Include="Font\HandlerBase.cs" />
+    <Compile Include="Font\CharFilter.cs" />
+    <Compile Include="Font\ConverterEnvironment.cs" />
+    <Compile Include="Font\GlyphImageFormat.cs" />
+    <Compile Include="Font\FontData.cs" />
+    <Compile Include="Font\GlyphImageInfo.cs" />
+    <Compile Include="Font\FontIO.cs" />
+    <Compile Include="Font\FontReader.cs" />
+    <Compile Include="Font\FontWriter.cs" />
+    <Compile Include="Font\NnsData.cs" />
+    <Compile Include="Font\Signature32.cs" />
+    <Compile Include="Font\G2dFont.cs" />
+    <Compile Include="Font\IBinarizable.cs" />
+    <Compile Include="Font\FontGlyphGroupsEx.cs" />
+    <Compile Include="Font\FontTextureGlyphEx.cs" />
+    <Compile Include="Font\FontWidthEx.cs" />
+    <Compile Include="Font\FontCodeMapEx.cs" />
+    <Compile Include="Font\FontInformationEx.cs" />
+    <Compile Include="Font\CMapInfoScanEx.cs" />
+    <Compile Include="Font\ErrorType.cs" />
+    <Compile Include="Font\GeneralException.cs" />
+    <Compile Include="Font\GlCm.cs" />
+    <Compile Include="Font\Glyph.cs" />
+    <Compile Include="Font\GlyphException.cs" />
+    <Compile Include="Font\GlyphGroups.cs" />
+    <Compile Include="Font\GlyphList.cs" />
+    <Compile Include="Font\GlyphOrder.cs" />
+    <Compile Include="Font\ImageBase.cs" />
+    <Compile Include="Font\ImageFontReader.cs" />
+    <Compile Include="Font\ImageFontWriter.cs" />
+    <Compile Include="Font\IndexImage.cs" />
+    <Compile Include="Font\WidthType.cs" />
+    <Compile Include="Font\Letterer.cs" />
+    <Compile Include="Font\LibFormat.cs" />
+    <Compile Include="Font\LibFormatFontGlyph.cs" />
+    <Compile Include="Font\NitroFontReader.cs" />
+    <Compile Include="Font\NitroFontWriter.cs" />
+    <Compile Include="Font\NnsReader.cs" />
+    <Compile Include="Font\NnsWriter.cs" />
+    <Compile Include="Font\HandlerBaseException.cs" />
+    <Compile Include="Font\Rpt.cs" />
+    <Compile Include="Font\IProgressControl.cs" />
+    <Compile Include="Font\ProgressControl.cs" />
+    <Compile Include="Font\RasterLetterer.cs" />
+    <Compile Include="Font\RgbImage.cs" />
+    <Compile Include="Font\GlyphDataType.cs" />
+    <Compile Include="Font\CharEncoding.cs" />
+    <Compile Include="Font\FontMapMethod.cs" />
+    <Compile Include="Font\FontSheetFormat.cs" />
+    <Compile Include="Font\TgaFile.cs" />
+    <Compile Include="Font\FontType.cs" />
+    <Compile Include="Font\IntColor.cs" />
+    <Compile Include="Font\IntArray.cs" />
+    <Compile Include="Font\IntIntMap.cs" />
+    <Compile Include="Font\FontInfo.cs" />
+    <Compile Include="Font\FontMap.cs" />
+    <Compile Include="Font\StringList.cs" />
+    <Compile Include="Font\VectorLetterer.cs" />
+    <Compile Include="Font\WinFontReader.cs" />
+    <Compile Include="Font\ConvertSettings.cs" />
+    <Compile Include="Font\InImageSettings.cs" />
+    <Compile Include="Font\InRuntimeBinarySettings.cs" />
+    <Compile Include="Font\InWinSettings.cs" />
+    <Compile Include="Font\OutImageSettings.cs" />
+    <Compile Include="Font\OutRuntimeBinarySettings.cs" />
+    <Compile Include="Font\Strings.cs" />
+    <Compile Include="Font\Ctr\TextureFormat.cs" />
+    <Compile Include="Font\Revolution\TextureFormat.cs" />
+    <Compile Include="Font\Runtime\RtConsts.cs" />
+    <Compile Include="Font\Runtime\BinaryFileHeader.cs" />
+    <Compile Include="Font\Runtime\BinaryBlockHeader.cs" />
+    <Compile Include="Font\Runtime\CharWidths.cs" />
+    <Compile Include="Font\Runtime\CMapScanEntry.cs" />
+    <Compile Include="Font\Runtime\CMapInfoScan.cs" />
+    <Compile Include="Font\Runtime\FontGlyphGroups.cs" />
+    <Compile Include="Font\Runtime\FontTextureGlyph.cs" />
+    <Compile Include="Font\Runtime\FontWidth.cs" />
+    <Compile Include="Font\Runtime\FontCodeMap.cs" />
+    <Compile Include="Font\Runtime\FontInformation.cs" />
+    <Compile Include="Font\Win32\ColorChooseFlag.cs" />
+    <Compile Include="Font\Win32\CCHOOKPROC.cs" />
+    <Compile Include="Font\Win32\CHOOSECOLOR.cs" />
+    <Compile Include="Font\Win32\CommonDialog.cs" />
+    <Compile Include="Font\Win32\LOGFONT.cs" />
+    <Compile Include="Font\Win32\ABC.cs" />
+    <Compile Include="Font\Win32\TEXTMETRIC.cs" />
+    <Compile Include="Font\Win32\NEWTEXTMETRIC.cs" />
+    <Compile Include="Font\Win32\ENUMLOGFONTEX.cs" />
+    <Compile Include="Font\Win32\FONTSIGNATURE.cs" />
+    <Compile Include="Font\Win32\NEWTEXTMETRICEX.cs" />
+    <Compile Include="Font\Win32\POINT.cs" />
+    <Compile Include="Font\Win32\GLYPHMETRICS.cs" />
+    <Compile Include="Font\Win32\FIXED.cs" />
+    <Compile Include="Font\Win32\MAT2.cs" />
+    <Compile Include="Font\Win32\RECT.cs" />
+    <Compile Include="Font\Win32\RGBQUAD.cs" />
+    <Compile Include="Font\Win32\BITMAPFILEHEADER.cs" />
+    <Compile Include="Font\Win32\BITMAPINFOHEADER.cs" />
+    <Compile Include="Font\Win32\BITMAPINFO.cs" />
+    <Compile Include="Font\Win32\BITMAPINFO256.cs" />
+    <Compile Include="Font\Win32\LOGBRUSH.cs" />
+    <Compile Include="Font\Win32\COLORREF.cs" />
+    <Compile Include="Font\Win32\GdiDef.cs" />
+    <Compile Include="Font\Win32\BS.cs" />
+    <Compile Include="Font\Win32\DIB.cs" />
+    <Compile Include="Font\Win32\FONTENUMPROC.cs" />
+    <Compile Include="Font\Win32\Gdi.cs" />
+    <Compile Include="Font\Win32\CodePage.cs" />
+    <Compile Include="Font\Win32\MBChar.cs" />
+    <Compile Include="Font\Win32\WideChar.cs" />
+    <Compile Include="Font\Win32\Kernel.cs" />
+    <Compile Include="Font\Win32\WINDOWPLACEMENT.cs" />
+    <Compile Include="Font\Win32\ShowWindowCommand.cs" />
+    <Compile Include="Font\Win32\WindowMessage.cs" />
+    <Compile Include="Font\Win32\User.cs" />
+    <Compile Include="sdk\Util.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Font\Strings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

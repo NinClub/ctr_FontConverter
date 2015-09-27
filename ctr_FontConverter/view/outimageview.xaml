@@ -1,0 +1,249 @@
+<c:OutImageView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:c="clr-namespace:NintendoWare.Font"
+                x:Uid="UserControl_1" ClipToBounds="true">
+  <FrameworkElement.Resources>
+    <c:RadioButtonBooleanConverter x:Key="radioButtonBooleanConverter" x:Uid="c:RadioButtonBooleanConverter_1"/>
+    <c:BooleanReverseConverter x:Key="booleanReverseConverter" x:Uid="c:BooleanReverseConverter_1"/>
+    <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type c:ImageFileFormatViewModel}">
+      <TextBlock x:Uid="TextBlock_1" Text="{Binding Path=Title}"/>
+    </DataTemplate>
+    <CollectionViewSource x:Key="orderFileView" x:Uid="CollectionViewSource_1" Source="{Binding Path=OrderInfos}"/>
+    <Style x:Key="commonStyle" x:Uid="Style_1" TargetType="{x:Type Control}">
+      <Setter x:Uid="Setter_1" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="comboBoxStyle" x:Uid="Style_2" TargetType="{x:Type ComboBox}"
+           BasedOn="{StaticResource commonStyle}">
+      <Setter x:Uid="Setter_2" Property="Control.Padding" Value="3"/>
+    </Style>
+    <Style x:Key="numberTextBox" x:Uid="Style_3" TargetType="{x:Type TextBox}"
+           BasedOn="{StaticResource commonStyle}">
+      <Setter x:Uid="Setter_3" Property="TextBox.TextAlignment" Value="Right"/>
+      <Setter x:Uid="Setter_4" Property="FrameworkElement.Width" Value="40"/>
+      <Setter x:Uid="Setter_5" Property="TextBox.MaxLength" Value="4"/>
+    </Style>
+    <Style x:Key="ColorSelectStyle" x:Uid="Style_4" TargetType="{x:Type Border}">
+      <Setter x:Uid="Setter_6" Property="FrameworkElement.Width" Value="25"/>
+      <Setter x:Uid="Setter_7" Property="FrameworkElement.Height" Value="15"/>
+    </Style>
+    <Style x:Key="ButtonStyle" x:Uid="Style_5" TargetType="{x:Type Button}">
+      <Setter x:Uid="Setter_8" Property="FrameworkElement.Margin" Value="4,4,4,4"/>
+    </Style>
+    <Style x:Key="groupBoxStyle" x:Uid="Style_6" TargetType="{x:Type GroupBox}"/>
+    <c:ColorBrushConverter x:Key="colorBrushConverter" x:Uid="c:ColorBrushConverter_1"/>
+  </FrameworkElement.Resources>
+  <StackPanel x:Uid="StackPanel_1">
+    <Grid x:Uid="Grid_1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Label x:Uid="Label_1" Grid.Row="0" Grid.Column="0" Style="{StaticResource commonStyle}" Content="画像ファイル:"/>
+      <c:FileSelectComboBox x:Name="IDC_OUT_IMAGE_PATH" x:Uid="IDC_OUT_IMAGE_PATH" Grid.Row="0" Grid.Column="1"
+                            Style="{StaticResource commonStyle}" Margin="4,2,4,2"
+                            CurrentPath="{Binding Path=CurrentPath, Mode=TwoWay}">
+        <c:FileSelectComboBox.PathHistory>
+          <Binding Path="PathHistory"/>
+        </c:FileSelectComboBox.PathHistory>
+      </c:FileSelectComboBox>
+      <c:FileDialogButton x:Uid="IDC_OUT_IMAGE_SEL_PATH" Grid.Row="0" Grid.Column="2" IsOutput="true"
+                          Style="{StaticResource commonStyle}"
+                          FilePath="{Binding ElementName=IDC_OUT_IMAGE_PATH, Path=CurrentPath, Mode=TwoWay}"
+                          FileFilter="{Binding Path=FileFilter}" FilterIndex="{Binding Path=FilterIndex}"/>
+      <Label x:Uid="Label_2" Grid.Row="1" Grid.Column="0" Style="{StaticResource commonStyle}" Content="文字順序:"/>
+      <ComboBox x:Uid="ComboBox_1" Grid.Row="1" Grid.Column="1" Style="{StaticResource comboBoxStyle}"
+                SelectedValuePath="FileName" Margin="4,2,4,2"
+                ItemsSource="{Binding Source={StaticResource orderFileView}}"
+                SelectedValue="{Binding Path=OrderFile}" IsEnabled="{Binding Path=IsReady}"/>
+    </Grid>
+    <StackPanel x:Uid="StackPanel_3" Margin="10">
+      <GroupBox x:Uid="GroupBox_1" Header="セルサイズ">
+        <StackPanel x:Uid="StackPanel_4">
+          <StackPanel x:Uid="StackPanel_5" Orientation="Horizontal">
+            <StackPanel x:Uid="StackPanel_6">
+              <RadioButton Name="IDC_OUT_IMAGE_SIZE_MARGIN" x:Uid="IDC_OUT_IMAGE_SIZE_MARGIN" Margin="5" Content="余白指定"
+                           IsChecked="{Binding Path=IsSizeOffsetSpec, Converter={StaticResource radioButtonBooleanConverter}, ConverterParameter=False}"/>
+            </StackPanel>
+            <StackPanel x:Uid="StackPanel_7">
+              <RadioButton Name="IDC_OUT_IMAGE_SIZE_SIZE" x:Uid="IDC_OUT_IMAGE_SIZE_SIZE" Margin="5" Content="サイズ/オフセット指定"
+                           IsChecked="{Binding Path=IsSizeOffsetSpec, Converter={StaticResource radioButtonBooleanConverter}, ConverterParameter=True}"/>
+            </StackPanel>
+          </StackPanel>
+          <StackPanel x:Uid="StackPanel_8" Orientation="Horizontal">
+            <Grid x:Uid="Grid_2">
+              <Grid x:Uid="Grid_3" Visibility="{Binding Path=MarginSettingVisibility}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_4"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_5"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_6"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_7"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition x:Uid="RowDefinition_3"/>
+                  <RowDefinition x:Uid="RowDefinition_4"/>
+                </Grid.RowDefinitions>
+                <Label x:Uid="Label_4" Grid.Row="0" Grid.Column="0" Content="左余白:"/>
+                <TextBox x:Uid="TextBox_1" Grid.Row="0" Grid.Column="1" Style="{StaticResource numberTextBox}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_1" Path="CellMarginLeft" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_1"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_5" Grid.Row="1" Grid.Column="0" Content="上余白:"/>
+                <TextBox x:Uid="TextBox_2" Grid.Row="1" Grid.Column="1" Style="{StaticResource numberTextBox}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_2" Path="CellMarginTop" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_2"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_6" Grid.Row="0" Grid.Column="2" Content="右余白:"
+                       IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}"/>
+                <TextBox x:Uid="TextBox_3" Grid.Row="0" Grid.Column="3" Style="{StaticResource numberTextBox}"
+                         IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_3" Path="CellMarginRight" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_3"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_7" Grid.Row="1" Grid.Column="2" Content="下余白:"
+                       IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}"/>
+                <TextBox x:Uid="TextBox_4" Grid.Row="1" Grid.Column="3" Style="{StaticResource numberTextBox}"
+                         IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_4" Path="CellMarginBottom" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_4"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+              </Grid>
+              <Grid x:Uid="Grid_4" Visibility="{Binding Path=SizeOffsetSettingVisibility}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_8"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_9"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_10"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_11"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition x:Uid="RowDefinition_5"/>
+                  <RowDefinition x:Uid="RowDefinition_6"/>
+                </Grid.RowDefinitions>
+                <Label x:Uid="Label_8" Grid.Row="0" Grid.Column="0" Content="セル幅:"/>
+                <TextBox x:Uid="TextBox_5" Grid.Row="0" Grid.Column="1" Style="{StaticResource numberTextBox}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_5" Path="CellSizeWidth" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_5"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_9" Grid.Row="1" Grid.Column="0" Content="セル高:"/>
+                <TextBox x:Uid="TextBox_6" Grid.Row="1" Grid.Column="1" Style="{StaticResource numberTextBox}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_6" Path="CellSizeHeight" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_6"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_10" Grid.Row="0" Grid.Column="2" Content="左余白:"
+                       IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}"/>
+                <TextBox x:Uid="TextBox_7" Grid.Row="0" Grid.Column="3" Style="{StaticResource numberTextBox}"
+                         IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_7" Path="CellSizeLeft" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_7"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+                <Label x:Uid="Label_11" Grid.Row="1" Grid.Column="2" Content="上余白:"
+                       IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}"/>
+                <TextBox x:Uid="TextBox_8" Grid.Row="1" Grid.Column="3" Style="{StaticResource numberTextBox}"
+                         IsEnabled="{Binding Path=IsImageCenter, Converter={StaticResource booleanReverseConverter}}">
+                  <TextBox.Text>
+                    <Binding x:Uid="Binding_8" Path="CellSizeTop" UpdateSourceTrigger="PropertyChanged">
+                      <Binding.ValidationRules>
+                        <ExceptionValidationRule x:Uid="ExceptionValidationRule_8"/>
+                      </Binding.ValidationRules>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+              </Grid>
+            </Grid>
+            <CheckBox x:Uid="CheckBox_1" VerticalAlignment="Center" Margin="10" Content="グリフを中心に配置する"
+                      IsChecked="{Binding Path=IsImageCenter}"/>
+          </StackPanel>
+        </StackPanel>
+      </GroupBox>
+      <StackPanel x:Uid="StackPanel_9" Orientation="Horizontal" Margin="0,5,0,5">
+        <Label x:Uid="Label_12" Content="画像形式:"/>
+        <ComboBox x:Uid="ComboBox_2" SelectedValuePath="Format" ItemsSource="{Binding Path=ImageFileFormatInfos}"
+                  SelectedValue="{Binding Path=OutImageFormat}"/>
+      </StackPanel>
+      <CheckBox x:Uid="CheckBox_2" Content="グリッドを描画する" Margin="0,5,0,5" IsChecked="{Binding Path=IsDrawGrid}"/>
+      <GroupBox x:Uid="GroupBox_2" Header="色の設定" Style="{StaticResource groupBoxStyle}" Margin="0,5,0,5">
+        <Grid x:Uid="Grid_5">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_12" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_13" Width="4"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_14" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_15" Width="4"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_16" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_17" Width="4"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_18" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_19" Width="4"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_20" Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition x:Uid="RowDefinition_7" Height="Auto"/>
+            <RowDefinition x:Uid="RowDefinition_8" Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Label x:Uid="Label_13" Grid.Row="0" Grid.Column="0" Content="null:"/>
+          <Button x:Uid="Button_1" Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonStyle}">
+            <Border x:Uid="Border_1" Style="{StaticResource ColorSelectStyle}"
+                    Background="{Binding Path=NullBlockColor, Mode=TwoWay, Converter={StaticResource colorBrushConverter}}"/>
+          </Button>
+          <Label x:Uid="Label_14" Grid.Row="0" Grid.Column="2" Content="グリッド:"/>
+          <Button x:Uid="Button_2" Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonStyle}">
+            <Border x:Uid="Border_2" Style="{StaticResource ColorSelectStyle}"
+                    Background="{Binding Path=GridColor, Mode=TwoWay, Converter={StaticResource colorBrushConverter}}"/>
+          </Button>
+          <Label x:Uid="Label_15" Grid.Row="0" Grid.Column="4" Content="幅線:"/>
+          <Button x:Uid="Button_3" Grid.Row="1" Grid.Column="4" Style="{StaticResource ButtonStyle}">
+            <Border x:Uid="Border_3" Style="{StaticResource ColorSelectStyle}"
+                    Background="{Binding Path=WidthBarColor, Mode=TwoWay, Converter={StaticResource colorBrushConverter}}"/>
+          </Button>
+          <Label x:Uid="Label_16" Grid.Row="0" Grid.Column="6" Content="余白:"/>
+          <Button x:Uid="Button_4" Grid.Row="1" Grid.Column="6" Style="{StaticResource ButtonStyle}">
+            <Border x:Uid="Border_4" Style="{StaticResource ColorSelectStyle}"
+                    Background="{Binding Path=MarginColor, Mode=TwoWay, Converter={StaticResource colorBrushConverter}}"/>
+          </Button>
+          <Label x:Uid="Label_17" Grid.Row="0" Grid.Column="8" Content="背景:"/>
+          <Button x:Uid="Button_5" Grid.Row="1" Grid.Column="8" Style="{StaticResource ButtonStyle}">
+            <Border x:Uid="Border_5" Style="{StaticResource ColorSelectStyle}"
+                    Background="{Binding Path=BackgroundColor, Mode=TwoWay, Converter={StaticResource colorBrushConverter}}"/>
+          </Button>
+        </Grid>
+      </GroupBox>
+    </StackPanel>
+  </StackPanel>
+</c:OutImageView>

@@ -1,0 +1,9 @@
+<WarningWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               x:Uid="Window_1" Title="警告/エラー" Height="300" Width="300" ShowInTaskbar="false"
+               WindowStyle="ToolWindow">
+  <DockPanel x:Uid="DockPanel_1">
+    <TextBox Name="tbMessage" x:Uid="tbMessage" IsReadOnly="true" VerticalScrollBarVisibility="Auto"
+             TextWrapping="Wrap"/>
+  </DockPanel>
+</WarningWindow>

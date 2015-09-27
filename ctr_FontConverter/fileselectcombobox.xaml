@@ -1,0 +1,8 @@
+<FileSelectComboBox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Uid="UserControl_1">
+  <DockPanel x:Uid="DockPanel_1">
+    <ComboBox Name="combBox" x:Uid="combBox" IsEditable="true" AllowDrop="true" Padding="3"
+              Text="{Binding Path=CurrentPath}" ItemsSource="{Binding Path=PathHistory}"/>
+  </DockPanel>
+</FileSelectComboBox>
