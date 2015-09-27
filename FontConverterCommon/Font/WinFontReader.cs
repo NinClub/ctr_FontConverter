@@ -78,9 +78,9 @@ label_2:
             try
             {
               int num2 = 6;
-              int num3;
-              ushort num4;
-              Glyph glyph;
+              int num3 = 0;
+              ushort num4 = 0;
+              Glyph glyph = null;
               while (true)
               {
                 switch (num2)
@@ -219,7 +219,7 @@ label_40:
     public override void ValidateInput()
     {
       int num = 10;
-      FontMap installedFontNames;
+      FontMap installedFontNames = null;
       while (true)
       {
         switch (num)

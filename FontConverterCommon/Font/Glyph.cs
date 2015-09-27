@@ -210,7 +210,7 @@ label_14:
     public override bool Equals(object obj)
     {
       int num = 0;
-      Glyph r;
+      Glyph r = null;
       while (true)
       {
         switch (num)

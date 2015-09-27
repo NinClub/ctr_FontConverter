@@ -38,7 +38,7 @@ namespace NintendoWare.Font
     public NnsData.GeneralBinaryBlockInfo GetBlock(Signature32 id, int no)
     {
       int num = 3;
-      NnsData.BlockList blockList;
+      NnsData.BlockList blockList = null;
       while (true)
       {
         switch (num)
@@ -101,7 +101,7 @@ label_9:
     protected NnsData.GeneralBinaryBlockInfo GetBlockItnl(Signature32 id, int no)
     {
       int num = 1;
-      NnsData.BlockList blockList;
+      NnsData.BlockList blockList = null;
       while (true)
       {
         switch (num)
@@ -143,7 +143,7 @@ label_9:
     private void a(Signature32 A_0, NnsData.GeneralBinaryBlockInfo A_1)
     {
       int num = 2;
-      NnsData.BlockList blockList1;
+      NnsData.BlockList blockList1 = null;
       while (true)
       {
         switch (num)

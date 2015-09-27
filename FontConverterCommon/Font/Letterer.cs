@@ -252,7 +252,7 @@ label_11:
     protected void CleanupFont()
     {
       int num = 0;
-      IntPtr hfont;
+      IntPtr hfont = default(IntPtr);
       while (true)
       {
         switch (num)
@@ -298,9 +298,9 @@ label_7:
 label_2:
       ushort[] gi = new ushort[2];
       int num = 6;
-      byte[] str;
-      int c1;
-      uint glyphIndicesA;
+      byte[] str = null;
+      int c1 = 0;
+      uint glyphIndicesA = 0;
       while (true)
       {
         switch (num)
@@ -371,7 +371,7 @@ label_2:
       image.EnableAlpha();
       int y = 0;
       int num2 = 3;
-      int x;
+      int x = 0;
       while (true)
       {
         switch (num2)
@@ -433,10 +433,10 @@ label_2:
       indexImage.SetColorTable(image.GetColorTable(), image.GetColorTableEntryNum());
       WidthType widthType = this.i;
       int num = 22;
-      int y;
-      int l;
-      int r;
-      int x;
+      int y = 0;
+      int l = 0;
+      int r = 0;
+      int x = 0;
       while (true)
       {
         switch (num)

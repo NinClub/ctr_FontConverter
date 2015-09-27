@@ -65,12 +65,12 @@ namespace NintendoWare.Font
 label_2:
       ImageFileFormat imageFileFormat1 = this.d;
       int num = 5;
+      ImageFileFormat imageFileFormat2 = default(ImageFileFormat);
+      int index = 0;
+      string b = "";
+      string a = "";
       while (true)
       {
-        ImageFileFormat imageFileFormat2;
-        int index;
-        string b;
-        string a;
         switch (num)
         {
           case 0:
@@ -232,7 +232,7 @@ label_2:
       ImageBase A_0_1 = this.a(A_0, A_1);
       this.a(A_0_1, A_0, A_1);
       int num = 1;
-      FontIO.ArrangeInfo A_1_1;
+      FontIO.ArrangeInfo A_1_1 = null;
       while (true)
       {
         switch (num)
@@ -281,11 +281,11 @@ label_2:
       this.q = Math.Max(A_0.CellWidth.Value, A_0.MaxCharWidth.Value);
       this.r = Math.Max(A_0.CellHeight.Value, A_0.BaselinePos.Value);
       int num1 = 30;
-      int? width;
-      int num2;
-      int num3;
-      int? ascent;
-      int? descent;
+      int? width = null;
+      int num2 = 0;
+      int num3 = 0;
+      int? ascent = null;
+      int? descent = null;
       while (true)
       {
         switch (num1)
@@ -464,9 +464,9 @@ label_2:
       byte alpha = (byte) 0;
       int x1 = 1;
       int num = 6;
-      int x2;
-      int y1;
-      int y2;
+      int x2 = 0;
+      int y1 = 0;
+      int y2 = 0;
       while (true)
       {
         switch (num)
@@ -565,14 +565,14 @@ label_23:;
 label_2:
       byte a = (byte) 0;
       int num1 = 2;
+      int y1 = 0;
+      int x1 = 0;
+      uint c = 0;
+      int x2 = 0;
+      int y2 = 0;
+      int num2 = 0;
       while (true)
       {
-        int y1;
-        int x1;
-        uint c;
-        int x2;
-        int y2;
-        int num2;
         switch (num1)
         {
           case 0:
@@ -699,11 +699,11 @@ label_2:
       int num5 = Math.Max(A_4.Right(), 0);
       int num6 = (this.q - (num4 + num3 + num5)) / 2;
       int num7 = 3;
-      int num8;
-      int num9;
-      int num10;
-      int num11;
-      byte alpha;
+      int num8 = 0;
+      int num9 = 0;
+      int num10 = 0;
+      int num11 = 0;
+      byte alpha = 0;
       while (true)
       {
         switch (num7)
@@ -778,9 +778,9 @@ label_2:
       ProgressControl.GetInstance().SetProgressBarMax(this.w * this.x);
       int num1 = 0;
       int num2 = 7;
-      int num3;
-      ushort charCode;
-      Glyph byCode;
+      int num3 = 0;
+      ushort charCode = 0;
+      Glyph byCode = null;
       while (true)
       {
         switch (num2)

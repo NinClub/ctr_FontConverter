@@ -15,9 +15,9 @@ namespace NintendoWare.Font
       using (Dictionary<int, int>.Enumerator enumerator = rhs.GetEnumerator())
       {
         int num1 = 0;
-        KeyValuePair<int, int> current;
-        int num2;
-        bool flag;
+        KeyValuePair<int, int> current = default(KeyValuePair<int, int>);
+        int num2 = 0;
+        bool flag = false;
         while (true)
         {
           switch (num1)

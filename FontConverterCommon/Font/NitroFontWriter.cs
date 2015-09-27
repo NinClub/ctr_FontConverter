@@ -82,15 +82,16 @@ label_2:
       ProgressControl.GetInstance().ResetProgressBarPos();
       this.a(fontData1, fontData);
       int num1 = 7;
-      int num2;
-      int num3;
+      int num2 = 0;
+      int num3 = 0;
+      CharWidths? defaultWidth1 = null;
+      CharWidths? defaultWidth2 = null;
+      int? cellWidth = null;
+      int num4 = 0;
+      int num5 = 0;
+      int num7 = 0;
       while (true)
       {
-        CharWidths? defaultWidth1;
-        CharWidths? defaultWidth2;
-        int? cellWidth;
-        int num4;
-        int num5;
         switch (num1)
         {
           case 0:
@@ -197,7 +198,6 @@ label_2:
         continue;
 label_25:
         int num6 = num5;
-        int num7;
         num3 = (int) sbyte.MinValue - (num7 + num6);
         num2 = (int) sbyte.MaxValue - (num7 + num6);
         num1 = 6;
@@ -224,12 +224,12 @@ label_37:
 label_2:
       FontIO.ValidateOutputPath(this.m_sd);
       int num1 = 31;
+      int num2 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      int num5 = 0;
       while (true)
       {
-        int num2;
-        int num3;
-        int num4;
-        int num5;
         switch (num1)
         {
           case 0:
@@ -489,10 +489,10 @@ label_2:
             try
             {
               int num2 = 2;
+              ushort index = 0;
+              bool flag = false;
               while (true)
               {
-                ushort index;
-                bool flag;
                 switch (num2)
                 {
                   case 0:
@@ -572,7 +572,7 @@ label_22:
       using (List<GlyphGroups.Group>.Enumerator enumerator = A_3.GetEnumerator())
       {
         int num = 5;
-        GlyphGroups.Group current;
+        GlyphGroups.Group current = null;
         while (true)
         {
           switch (num)
@@ -620,10 +620,10 @@ label_13:;
 label_2:
       IntIntMap intIntMap = new IntIntMap();
       int num1 = 5;
-      int index;
-      bool flag1;
-      bool flag2;
-      List<GlyphGroups.Group>.Enumerator enumerator;
+      int index = 0;
+      bool flag1 = false;
+      bool flag2 = false;
+      List<GlyphGroups.Group>.Enumerator enumerator = default(List<GlyphGroups.Group>.Enumerator);
       while (true)
       {
         switch (num1)
@@ -738,8 +738,8 @@ label_2:
       if (1 == 0)
         ;
       int num1 = 3;
-      int num2;
-      bool flag;
+      int num2 = 0;
+      bool flag = false;
       while (true)
       {
         switch (num1)
@@ -876,12 +876,12 @@ label_3:
       NitroFontWriter.CodeExistsMap A_2_1 = new NitroFontWriter.CodeExistsMap();
       IEnumerator<Glyph> enumerator1 = A_3.GetGlyphList().GetEnum().GetEnumerator();
       int num1 = 2;
-      NitroFontWriter.SubGroup sg;
+      NitroFontWriter.SubGroup sg = null;
+      Dictionary<ushort, bool>.Enumerator enumerator2 = default(Dictionary<ushort, bool>.Enumerator);
       while (true)
       {
         if (1 == 0)
           ;
-        Dictionary<ushort, bool>.Enumerator enumerator2;
         switch (num1)
         {
           case 0:
@@ -895,9 +895,9 @@ label_3:
             try
             {
               int num2 = 4;
+              KeyValuePair<ushort, bool> current = default(KeyValuePair<ushort, bool>);
               while (true)
               {
-                KeyValuePair<ushort, bool> current;
                 switch (num2)
                 {
                   case 0:
@@ -1014,8 +1014,8 @@ label_33:
 label_2:
       int index1 = GlCm.DIV_UP(A_1, 32);
       int num1 = 4;
-      int index2;
-      int num2;
+      int index2 = 0;
+      int num2 = 0;
       while (true)
       {
         switch (num1)
@@ -1149,9 +1149,9 @@ label_9:;
       try
       {
         int num = 5;
-        Glyph current;
-        ushort code;
-        ushort ccode;
+        Glyph current = null;
+        ushort code = 0;
+        ushort ccode = 0;
         while (true)
         {
           switch (num)
@@ -1225,10 +1225,10 @@ label_2:
       ProgressControl.GetInstance().SetProgressBarMax(A_1.GetGlyphList().GetNum() * 3);
       int? cellWidth = A_1.CellWidth;
       int num = 5;
-      int? cellHeight;
-      int? baselinePos1;
-      int? baselinePos2;
-      int? maxCharWidth;
+      int? cellHeight = null;
+      int? baselinePos1 = null;
+      int? baselinePos2 = null;
+      int? maxCharWidth = null;
       while (true)
       {
         switch (num)
@@ -1316,51 +1316,51 @@ label_23:
     private void a(FontData A_0)
     {
       int num1 = 7;
-      int index1;
-      List<int> list1;
-      NitroFontWriter.SurplusList surplusList1;
-      int index2;
-      NitroFontWriter.SheetSurplus sheetSurplus1;
-      int num2;
-      uint num3;
-      ushort key;
-      List<int>[] listArray;
-      int index3;
-      Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator1;
-      bool flag1;
-      List<NitroFontWriter.SheetSurplus>.Enumerator enumerator2;
-      NitroFontWriter.SharedCodeMap sharedCodeMap;
-      List<int> list2;
-      int index4;
-      Glyph byCode1;
-      GlyphGroups.GroupList groups;
-      int index5;
-      int index6;
-      int index7;
-      List<int> list3;
-      List<int>.Enumerator enumerator3;
-      int num4;
-      Dictionary<ushort, List<int>>.Enumerator enumerator4;
-      KeyValuePair<ushort, List<int>> current1;
-      KeyValuePair<ushort, List<int>> current2;
-      Dictionary<ushort, List<int>>.Enumerator enumerator5;
-      IEnumerator<NitroFontWriter.SheetSurplus> enumerator6;
-      NitroFontWriter.SurplusList surplusList2;
-      Dictionary<string, NitroFontWriter.Group>.Enumerator enumerator7;
-      List<NitroFontWriter.GlyphCode>.Enumerator enumerator8;
-      int A_1_1;
-      List<int> list4;
-      ushort num5;
-      NitroFontWriter.SubGroup sg;
-      int surplus1;
-      int index8;
-      int num6;
-      NitroFontWriter.SheetSurplus sheetSurplus2;
-      GlyphList glyphList;
-      ushort? alterChar;
-      int count1;
-      ushort uni;
-      Dictionary<ushort, int> codeSubIndexDic;
+      int index1 = 0;
+      List<int> list1 = null;
+      NitroFontWriter.SurplusList surplusList1 = null;
+      int index2 = 0;
+      NitroFontWriter.SheetSurplus sheetSurplus1 = null;
+      int num2 = 0;
+      uint num3 = 0;
+      ushort key = 0;
+      List<int>[] listArray = null;
+      int index3 = 0;
+      Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator1 = default(Dictionary<int, NitroFontWriter.SubGroup>.Enumerator);
+      bool flag1 = false;
+      List<NitroFontWriter.SheetSurplus>.Enumerator enumerator2 = default(List<NitroFontWriter.SheetSurplus>.Enumerator);
+      NitroFontWriter.SharedCodeMap sharedCodeMap = null;
+      List<int> list2 = null;
+      int index4 = 0;
+      Glyph byCode1 = null;
+      GlyphGroups.GroupList groups = null;
+      int index5 = 0;
+      int index6 = 0;
+      int index7 = 0;
+      List<int> list3 = null;
+      List<int>.Enumerator enumerator3 = default(List<int>.Enumerator);
+      int num4 = 0;
+      Dictionary<ushort, List<int>>.Enumerator enumerator4 = default(Dictionary<ushort, List<int>>.Enumerator);
+      KeyValuePair<ushort, List<int>> current1 = default(KeyValuePair<ushort, List<int>>);
+      KeyValuePair<ushort, List<int>> current2 = default(KeyValuePair<ushort, List<int>>);
+      Dictionary<ushort, List<int>>.Enumerator enumerator5 = default(Dictionary<ushort, List<int>>.Enumerator);
+      IEnumerator<NitroFontWriter.SheetSurplus> enumerator6 = null;
+      NitroFontWriter.SurplusList surplusList2 = null;
+      Dictionary<string, NitroFontWriter.Group>.Enumerator enumerator7 = default(Dictionary<string, NitroFontWriter.Group>.Enumerator);
+      List<NitroFontWriter.GlyphCode>.Enumerator enumerator8 = default(List<NitroFontWriter.GlyphCode>.Enumerator);
+      int A_1_1 = 0;
+      List<int> list4 = null;
+      ushort num5 = 0;
+      NitroFontWriter.SubGroup sg = null;
+      int surplus1 = 0;
+      int index8 = 0;
+      int num6 = 0;
+      NitroFontWriter.SheetSurplus sheetSurplus2 = null;
+      GlyphList glyphList = null;
+      ushort? alterChar = null;
+      int count1 = 0;
+      ushort uni = 0;
+      Dictionary<ushort, int> codeSubIndexDic = null;
       while (true)
       {
         switch (num1)
@@ -1381,11 +1381,11 @@ label_23:
               num1 = 71;
               continue;
             }
-            num5 = A_0_1.GetGlyphList().GetFirstItem().GetCode();
+            num5 = A_0.GetGlyphList().GetFirstItem().GetCode();
             num1 = 78;
             continue;
           case 2:
-            NitroFontWriter.a(this.q, this.p, A_0_1);
+            NitroFontWriter.a(this.q, this.p, A_0);
             num1 = 97;
             continue;
           case 3:
@@ -1433,7 +1433,7 @@ label_23:
             num1 = 61;
             continue;
           case 12:
-            alterChar = A_0_1.AlterChar;
+            alterChar = A_0.AlterChar;
             num5 = alterChar.Value;
             num1 = 16;
             continue;
@@ -1448,7 +1448,7 @@ label_23:
             try
             {
               int num8 = 5;
-              NitroFontWriter.SheetSurplus current3;
+              NitroFontWriter.SheetSurplus current3 = null;
               while (true)
               {
                 switch (num8)
@@ -1669,14 +1669,14 @@ label_250:
             try
             {
               int num8 = 7;
+              KeyValuePair<string, NitroFontWriter.Group> current3 = default(KeyValuePair<string, NitroFontWriter.Group>);
+              NitroFontWriter.IndexList indexList1 = null;
+              int count2 = 0;
+              int index9 = 0;
+              NitroFontWriter.SubGroup subGroup = null;
+              bool flag2 = false;
               while (true)
               {
-                KeyValuePair<string, NitroFontWriter.Group> current3;
-                NitroFontWriter.IndexList indexList1;
-                int count2;
-                int index9;
-                NitroFontWriter.SubGroup subGroup;
-                bool flag2;
                 switch (num8)
                 {
                   case 0:
@@ -1690,11 +1690,11 @@ label_250:
                     try
                     {
                       int num9 = 8;
+                      NitroFontWriter.IndexList indexList2 = null;
+                      int num11 = 0;
+                      bool flag3 = false;
                       while (true)
                       {
-                        NitroFontWriter.IndexList indexList2;
-                        int num11;
-                        bool flag3;
                         switch (num9)
                         {
                           case 0:
@@ -1835,10 +1835,10 @@ label_129:
             try
             {
               int num8 = 0;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current3 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
+              int index9 = 0;
               while (true)
               {
-                KeyValuePair<int, NitroFontWriter.SubGroup> current3;
-                int index9;
                 switch (num8)
                 {
                   case 1:
@@ -1956,7 +1956,7 @@ label_218:
             num1 = 79;
             continue;
           case 51:
-            alterChar = A_0_1.AlterChar;
+            alterChar = A_0.AlterChar;
             num1 = 63;
             continue;
           case 52:
@@ -2033,11 +2033,11 @@ label_218:
             try
             {
               int num8 = 4;
+              NitroFontWriter.CodeList codeList = null;
+              NitroFontWriter.GlyphCode glyphCode3 = default(NitroFontWriter.GlyphCode);
+              KeyValuePair<int, NitroFontWriter.SubGroup> current3 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
               while (true)
               {
-                NitroFontWriter.CodeList codeList;
-                NitroFontWriter.GlyphCode glyphCode3;
-                KeyValuePair<int, NitroFontWriter.SubGroup> current3;
                 switch (num8)
                 {
                   case 0:
@@ -2160,13 +2160,13 @@ label_132:
             try
             {
               int num8 = 3;
+              int index9 = 0;
+              NitroFontWriter.CodeList codeList = null;
+              ushort num9 = 0;
+              Glyph byCode2 = null;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current3 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
               while (true)
               {
-                int index9;
-                NitroFontWriter.CodeList codeList;
-                ushort num9;
-                Glyph byCode2;
-                KeyValuePair<int, NitroFontWriter.SubGroup> current3;
                 switch (num8)
                 {
                   case 0:
@@ -2246,7 +2246,7 @@ label_264:
               enumerator1.Dispose();
             }
 label_302:
-            byCode1 = A_0_1.GetGlyphList().GetByCode(this.t);
+            byCode1 = A_0.GetGlyphList().GetByCode(this.t);
             num1 = 117;
             continue;
           case 82:
@@ -2306,7 +2306,7 @@ label_210:
             surplusList1.Clear();
             this.s.SheetNum = A_1_1;
             this.s.AllSheetCellNum = this.s.SheetNum * this.s.CellNum;
-            glyphList = A_0_1.GetGlyphList();
+            glyphList = A_0.GetGlyphList();
             enumerator1 = this.p.GetEnumerator();
             num1 = 81;
             continue;
@@ -2341,10 +2341,10 @@ label_210:
             try
             {
               int num8 = 7;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current3 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
+              NitroFontWriter.CodeList codeList = null;
               while (true)
               {
-                KeyValuePair<int, NitroFontWriter.SubGroup> current3;
-                NitroFontWriter.CodeList codeList;
                 switch (num8)
                 {
                   case 0:
@@ -2487,7 +2487,7 @@ label_208:
             continue;
           case 103:
             IntIntMap A_1_2 = new IntIntMap();
-            this.a(this.p, A_1_2, groups, A_0_1, this.k);
+            this.a(this.p, A_1_2, groups, A_0, this.k);
             NitroFontWriter.a(this.q, A_1_2, groups);
             this.v = true;
             num1 = 91;
@@ -2506,9 +2506,9 @@ label_208:
             try
             {
               int num8 = 3;
+              NitroFontWriter.SubGroup sub = null;
               while (true)
               {
-                NitroFontWriter.SubGroup sub;
                 switch (num8)
                 {
                   case 0:
@@ -2632,17 +2632,17 @@ label_313:
     private void e(G2dFont A_0, FontData A_1)
     {
       int num1 = 0;
-      List<NitroFontWriter.Group> list;
-      G2dFont.SheetSetList sheetSetList;
-      int numBlock1;
-      int numBlock2;
-      List<NitroFontWriter.Group>.Enumerator enumerator1;
+      List<NitroFontWriter.Group> list = null;
+      G2dFont.SheetSetList sheetSetList = null;
+      int numBlock1 = 0;
+      int numBlock2 = 0;
+      List<NitroFontWriter.Group>.Enumerator enumerator1 = default(List<NitroFontWriter.Group>.Enumerator);
+      int numBlock3 = 0;
+      Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator2 = default(Dictionary<int, NitroFontWriter.SubGroup>.Enumerator);
       while (true)
       {
         if (1 == 0)
           ;
-        int numBlock3;
-        Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator2;
         switch (num1)
         {
           case 1:
@@ -2651,10 +2651,10 @@ label_313:
             try
             {
               int num2 = 0;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
+              int num3 = 0;
               while (true)
               {
-                KeyValuePair<int, NitroFontWriter.SubGroup> current;
-                int num3;
                 switch (num2)
                 {
                   case 1:
@@ -2735,8 +2735,8 @@ label_7:
       try
       {
         int num2 = 1;
-        G2dFont.SheetSet sheetSet;
-        List<int>.Enumerator enumerator2;
+        G2dFont.SheetSet sheetSet = null;
+        List<int>.Enumerator enumerator3 = default(List<int>.Enumerator);
         while (true)
         {
           switch (num2)
@@ -2749,7 +2749,7 @@ label_7:
                 this.b(sheetSet.UseSheets, this.s.SheetNum);
                 this.b(sheetSet.UseCWDH, numBlock1);
                 this.b(sheetSet.UseCMAP, numBlock2);
-                enumerator2 = current.SubGroups.GetEnumerator();
+                enumerator3 = current.SubGroups.GetEnumerator();
                 num2 = 5;
                 continue;
               }
@@ -2764,12 +2764,12 @@ label_7:
               try
               {
                 int num3 = 0;
+                NitroFontWriter.SubGroup subGroup1 = null;
+                bool flag = false;
+                NitroFontWriter.SubGroup subGroup2 = null;
+                int sheetIndexBegin = 0;
                 while (true)
                 {
-                  NitroFontWriter.SubGroup subGroup1;
-                  bool flag;
-                  NitroFontWriter.SubGroup subGroup2;
-                  int sheetIndexBegin;
                   switch (num3)
                   {
                     case 1:
@@ -2819,9 +2819,9 @@ label_7:
                       num3 = 10;
                       continue;
                     case 12:
-                      if (enumerator2.MoveNext())
+                      if (enumerator3.MoveNext())
                       {
-                        flag = this.p.TryGetValue(enumerator2.Current, out subGroup1);
+                        flag = this.p.TryGetValue(enumerator3.Current, out subGroup1);
                         num3 = 1;
                         continue;
                       }
@@ -2833,7 +2833,7 @@ label_7:
               }
               finally
               {
-                enumerator2.Dispose();
+                enumerator3.Dispose();
               }
 label_13:
               sheetSetList.Add(sheetSet);
@@ -2896,9 +2896,9 @@ label_2:
       byte[] numArray = new byte[length];
       this.a(numArray, this.s, A_1);
       int num1 = 3;
-      ushort sheetFormat;
-      byte[] image;
-      int imageSize;
+      ushort sheetFormat = 0;
+      byte[] image = null;
+      int imageSize = 0;
       while (true)
       {
         int num2;
@@ -2909,7 +2909,7 @@ label_2:
               ;
             byte[] A_0_1 = new byte[this.s.SheetBytes * 2 * this.s.SheetNum];
             uint num3 = this.a(A_0_1, numArray, this.s);
-            sheetFormat |= (ushort) short.MinValue;
+            sheetFormat |= unchecked((ushort) short.MinValue);
             image = A_0_1;
             imageSize = (int) num3;
             num1 = 4;
@@ -2954,7 +2954,7 @@ label_2:
         ;
       GlyphImageFormat glyphImageFormat = A_0;
       int num = 6;
-      NintendoWare.Font.Revolution.TextureFormat textureFormat;
+      NintendoWare.Font.Revolution.TextureFormat textureFormat = default(NintendoWare.Font.Revolution.TextureFormat);
       while (true)
       {
         switch (num)
@@ -3026,7 +3026,7 @@ label_15:
 label_2:
       GlyphImageFormat glyphImageFormat = A_0;
       int num = 10;
-      NintendoWare.Font.Ctr.TextureFormat textureFormat;
+      NintendoWare.Font.Ctr.TextureFormat textureFormat = default(NintendoWare.Font.Ctr.TextureFormat);
       while (true)
       {
         switch (num)
@@ -3112,7 +3112,7 @@ label_2:
       ushort num2 = ushort.MaxValue;
       Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator1 = this.p.GetEnumerator();
       int num3 = 3;
-      Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator2;
+      Dictionary<int, NitroFontWriter.SubGroup>.Enumerator enumerator2 = default(Dictionary<int, NitroFontWriter.SubGroup>.Enumerator);
       while (true)
       {
         switch (num3)
@@ -3134,20 +3134,20 @@ label_2:
             try
             {
               int num4 = 6;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current1 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
+              List<NitroFontWriter.GlyphCode>.Enumerator enumerator3 = default(List<NitroFontWriter.GlyphCode>.Enumerator);
               while (true)
               {
-                KeyValuePair<int, NitroFontWriter.SubGroup> current1;
-                List<NitroFontWriter.GlyphCode>.Enumerator enumerator3;
                 switch (num4)
                 {
                   case 0:
                     try
                     {
                       int num5 = 3;
+                      ushort gryphIndex = 0;
+                      Glyph byCode = null;
                       while (true)
                       {
-                        ushort gryphIndex;
-                        Glyph byCode;
                         switch (num5)
                         {
                           case 1:
@@ -3246,9 +3246,9 @@ label_44:
             try
             {
               int num4 = 0;
+              KeyValuePair<int, NitroFontWriter.SubGroup> current = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
               while (true)
               {
-                KeyValuePair<int, NitroFontWriter.SubGroup> current;
                 switch (num4)
                 {
                   case 1:
@@ -3367,9 +3367,9 @@ label_2:
       NitroFontWriter.Range A_0_1 = new NitroFontWriter.Range();
       LinkedListNode<Glyph> A_2_1 = A_2.First;
       int num = 4;
+      bool flag = false;
       while (true)
       {
-        bool flag;
         switch (num)
         {
           case 0:
@@ -3444,23 +3444,23 @@ label_2:
       NitroFontWriter.Range A_0_1 = new NitroFontWriter.Range();
       LinkedListNode<Glyph> A_2_1 = A_2.First;
       int num1 = 0;
+      NitroFontWriter.Range A_0_2 = default(NitroFontWriter.Range);
+      bool flag1 = false;
+      int num2 = 0;
+      int num3 = 0;
+      NitroFontWriter.Range A_0_3 = default(NitroFontWriter.Range);
+      float num4 = 0;
+      float num5 = 0;
+      Glyph byCode = null;
+      ushort code1 = 0;
+      int index = 0;
+      int length = 0;
+      ushort code2 = 0;
+      ushort[] data = null;
+      bool flag2 = false;
+      int num6 = 0;
       while (true)
       {
-        NitroFontWriter.Range A_0_2;
-        bool flag1;
-        int num2;
-        int num3;
-        NitroFontWriter.Range A_0_3;
-        float num4;
-        float num5;
-        Glyph byCode;
-        ushort code1;
-        int index;
-        int length;
-        ushort code2;
-        ushort[] data;
-        bool flag2;
-        int num6;
         switch (num1)
         {
           case 0:
@@ -3678,10 +3678,10 @@ label_35:;
     private bool b(ref NitroFontWriter.Range A_0, LinkedListNode<Glyph> A_1, LinkedListNode<Glyph> A_2)
     {
       int num1 = 8;
-      LinkedListNode<Glyph> next;
-      ushort num2;
-      ushort num3;
-      LinkedListNode<Glyph> linkedListNode;
+      LinkedListNode<Glyph> next = null;
+      ushort num2 = 0;
+      ushort num3 = 0;
+      LinkedListNode<Glyph> linkedListNode = null;
       while (true)
       {
         switch (num1)
@@ -3758,9 +3758,9 @@ label_18:
     private bool a(ref NitroFontWriter.Range A_0, LinkedListNode<Glyph> A_1, LinkedListNode<Glyph> A_2)
     {
       int num1 = 2;
-      LinkedListNode<Glyph> previous1;
-      ushort num2;
-      LinkedListNode<Glyph> previous2;
+      LinkedListNode<Glyph> previous1 = null;
+      ushort num2 = 0;
+      LinkedListNode<Glyph> previous2 = null;
       while (true)
       {
         switch (num1)
@@ -3967,10 +3967,10 @@ label_2:
       int num2 = int.MaxValue;
       int num3 = 32;
       int num4 = 7;
-      int num5;
-      int num6;
-      int num7;
-      int num8;
+      int num5 = 0;
+      int num6 = 0;
+      int num7 = 0;
+      int num8 = 0;
       while (true)
       {
         switch (num4)
@@ -4107,10 +4107,10 @@ label_14:
       try
       {
         int num3 = 1;
+        KeyValuePair<int, NitroFontWriter.SubGroup> current1 = default(KeyValuePair<int, NitroFontWriter.SubGroup>);
+        List<NitroFontWriter.GlyphCode>.Enumerator enumerator2 = default(List<NitroFontWriter.GlyphCode>.Enumerator);
         while (true)
         {
-          KeyValuePair<int, NitroFontWriter.SubGroup> current1;
-          List<NitroFontWriter.GlyphCode>.Enumerator enumerator2;
           switch (num3)
           {
             case 0:
@@ -4127,13 +4127,13 @@ label_14:
               try
               {
                 int num4 = 3;
+                ushort gryphIndex = 0;
+                int x = 0;
+                int num5 = 0;
+                int y = 0;
+                Glyph byCode = null;
                 while (true)
                 {
-                  ushort gryphIndex;
-                  int x;
-                  int num5;
-                  int y;
-                  Glyph byCode;
                   switch (num4)
                   {
                     case 1:
@@ -4401,9 +4401,9 @@ label_2:
       byte[] buffer = new byte[pixelPicker.BlockPixelNum * 2];
       int num1 = 0;
       int num2 = 4;
-      int num3;
-      ByteOrderBinaryWriter orderBinaryWriter2;
-      int pos;
+      int num3 = 0;
+      ByteOrderBinaryWriter orderBinaryWriter2 = null;
+      int pos = 0;
       while (true)
       {
         switch (num2)
@@ -4526,8 +4526,8 @@ label_2:
         ;
       bool flag = A_0.GetBlock(RtConsts.BinBlockSigGLGR) != null;
       int num1 = 1;
-      BinaryFile binaryFile;
-      Signature32 sig;
+      BinaryFile binaryFile = null;
+      Signature32 sig = default(Signature32);
       while (true)
       {
         Signature32 signature32;
@@ -4565,7 +4565,7 @@ label_7:
         NnsData.GeneralBinaryBlockInfo block1 = A_0.GetBlock(RtConsts.BinBlockSigCGLP);
         NnsData.GeneralBinaryBlockInfo block2 = A_0.GetBlock(RtConsts.BinBlockSigTGLP);
         int num2 = 2;
-        int no;
+        int no = 0;
         while (true)
         {
           switch (num2)
@@ -4845,8 +4845,8 @@ label_29:;
       public void Erase(LinkedListNode<Glyph> first, LinkedListNode<Glyph> last)
       {
         int num = 6;
-        LinkedListNode<Glyph> linkedListNode;
-        LinkedListNode<Glyph> next;
+        LinkedListNode<Glyph> linkedListNode = null;
+        LinkedListNode<Glyph> next = null;
         while (true)
         {
           switch (num)
@@ -5027,7 +5027,7 @@ label_6:
       public void WritePixelA3RGB5(ImageBase.Pixel pixel)
       {
         int num1 = 1;
-        ushort num2;
+        ushort num2 = 0;
         while (true)
         {
           switch (num1)

@@ -199,7 +199,7 @@ label_2:
       pixel.Alpha = alpha;
       int index1 = 0;
       int num = 2;
-      int index2;
+      int index2 = 0;
       while (true)
       {
         switch (num)
@@ -261,13 +261,13 @@ label_11:
     public void Paste(byte[] buf, int x, int y, int width, int height, int bpp, int align)
     {
       int num1 = 10;
-      int index1;
-      int num2;
-      BitReader bitReader;
-      int index2;
-      int num3;
-      int num4;
-      int bits1;
+      int index1 = 0;
+      int num2 = 0;
+      BitReader bitReader = null;
+      int index2 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      int bits1 = 0;
       while (true)
       {
         switch (num1)
@@ -345,8 +345,8 @@ label_16:;
     public void Paste(ImageBase image, int sx, int sy, int dx, int dy, int width, int height)
     {
       int num1 = 8;
-      int num2;
-      int num3;
+      int num2 = 0;
+      int num3 = 0;
       while (true)
       {
         switch (num1)
@@ -441,7 +441,7 @@ label_2:
       int num4 = y + h;
       int y1 = num3;
       int num5 = 4;
-      int x1;
+      int x1 = 0;
       while (true)
       {
         switch (num5)
@@ -499,7 +499,7 @@ label_2:
       BitWriter bitWriter = new BitWriter(buf);
       int index1 = num1;
       int num5 = 4;
-      int index2;
+      int index2 = 0;
       while (true)
       {
         switch (num5)
@@ -560,8 +560,8 @@ label_11:
 label_2:
       image.Create(width, height, this.c);
       int num = 1;
-      int index1;
-      int index2;
+      int index1 = 0;
+      int index2 = 0;
       while (true)
       {
         switch (num)
@@ -636,10 +636,10 @@ label_17:;
     public bool Equals(ImageBase right)
     {
       int num = 14;
+      int y = 0;
+      int x = 0;
       while (true)
       {
-        int y;
-        int x;
         switch (num)
         {
           case 0:
@@ -770,10 +770,10 @@ label_2:
       rect.bottom = 0;
       int y = 0;
       int num1 = 23;
-      int num2;
-      int x1;
-      int x2;
-      int num3;
+      int num2 = 0;
+      int x1 = 0;
+      int x2 = 0;
+      int num3 = 0;
       while (true)
       {
         switch (num1)
@@ -948,10 +948,10 @@ label_2:
       rect.bottom = 0;
       int index1 = 0;
       int num1 = 12;
-      int num2;
-      int index2;
-      int index3;
-      int num3;
+      int num2 = 0;
+      int index2 = 0;
+      int index3 = 0;
+      int num3 = 0;
       while (true)
       {
         switch (num1)
@@ -1122,7 +1122,7 @@ label_46:;
       if (1 == 0)
         ;
       int num = 0;
-      ImageBase right;
+      ImageBase right = null;
       while (true)
       {
         switch (num)
@@ -1163,7 +1163,7 @@ label_2:
       int num1 = this.a ^ this.b ^ this.c ^ this.d.GetHashCode() ^ this.e.GetHashCode();
       int y = 0;
       int num2 = 4;
-      int x;
+      int x = 0;
       while (true)
       {
         switch (num2)

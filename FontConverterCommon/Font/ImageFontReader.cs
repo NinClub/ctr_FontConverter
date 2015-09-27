@@ -40,10 +40,10 @@ label_2:
       ImageFileFormat A_1_1 = this.a();
       ImageFileFormat imageFileFormat = A_1_1;
       int num = 11;
-      FontIO.ArrangeInfo A_0_1;
-      GlyphOrder glyphOrder;
-      RgbImage A_0_2;
-      IntColor A_5;
+      FontIO.ArrangeInfo A_0_1 = null;
+      GlyphOrder glyphOrder = null;
+      RgbImage A_0_2 = null;
+      IntColor A_5 = default(IntColor);
       while (true)
       {
         switch (num)
@@ -140,20 +140,20 @@ label_22:
     public override void ValidateInput()
     {
       int num1 = 9;
+      int x = 0;
+      int hnum = 0;
+      int num2 = 0;
+      int num3 = 0;
+      int y = 0;
+      ImageBase A_0 = null;
+      GlyphOrder glyphOrder = null;
+      int vnum = 0;
+      int A_3 = 0;
+      int A_4 = 0;
+      ushort charCode = 0;
+      bool flag = false;
       while (true)
       {
-        int x;
-        int hnum;
-        int num2;
-        int num3;
-        int y;
-        ImageBase A_0;
-        GlyphOrder glyphOrder;
-        int vnum;
-        int A_3;
-        int A_4;
-        ushort charCode;
-        bool flag;
         switch (num1)
         {
           case 0:
@@ -371,8 +371,8 @@ label_2:
       A_0.Reserve(this.f * this.e);
       int num1 = 0;
       int num2 = 5;
-      int num3;
-      ushort charCode;
+      int num3 = 0;
+      ushort charCode = 0;
       while (true)
       {
         switch (num2)
@@ -472,19 +472,19 @@ label_2:
       List<int> list2 = new List<int>();
       int x = num1;
       int num5 = 5;
-      IntArray intArray1;
+      IntArray intArray1 = null;
+      int y = 0;
+      uint rgb1 = 0;
+      uint num6 = 0;
+      uint rgb2 = 0;
+      IntArray intArray2 = null;
+      int count = 0;
+      uint num7 = 0;
+      IntArray intArray3 = null;
+      int num8 = 0;
+      IntArray intArray4 = null;
       while (true)
       {
-        int y;
-        uint rgb1;
-        uint num6;
-        uint rgb2;
-        IntArray intArray2;
-        int count;
-        uint num7;
-        IntArray intArray3;
-        int num8;
-        IntArray intArray4;
         switch (num5)
         {
           case 0:
@@ -807,9 +807,9 @@ label_2:
       RgbImage image = new RgbImage();
       RgbImage bar = new RgbImage();
       int num3 = 11;
+      Glyph glyph = null;
       while (true)
       {
-        Glyph glyph;
         switch (num3)
         {
           case 0:
@@ -914,16 +914,16 @@ label_2:
       rgbImage.Paste(A_0, 0, 0, 1, 1, width1, height1);
       int y = 0;
       int num1 = 3;
-      int num2;
-      ImageBase.Pixel[] pixelArray;
-      int index1;
-      int num3;
-      int num4;
-      int num5;
-      int x;
-      ImageBase.Pixel pixel;
-      int index2;
-      int num6;
+      int num2 = 0;
+      ImageBase.Pixel[] pixelArray = null;
+      int index1 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      int num5 = 0;
+      int x = 0;
+      ImageBase.Pixel pixel = default(ImageBase.Pixel);
+      int index2 = 0;
+      int num6 = 0;
       while (true)
       {
         switch (num1)
@@ -1127,12 +1127,12 @@ label_7:;
     private bool a(ImageBase A_0, ImageBase A_1, IntColor A_2)
     {
       int num = 2;
-      int x1;
-      int y;
-      int x2;
-      uint intColor;
-      ImageBase.Pixel pixel1;
-      ImageBase.Pixel pixel2;
+      int x1 = 0;
+      int y = 0;
+      int x2 = 0;
+      uint intColor = 0;
+      ImageBase.Pixel pixel1 = default(ImageBase.Pixel);
+      ImageBase.Pixel pixel2 = default(ImageBase.Pixel);
       while (true)
       {
         switch (num)
@@ -1247,39 +1247,39 @@ label_31:
 label_2:
       A_0.Create(A_1.Width, A_1.Height, 24);
       int num1 = 70;
+      bool flag = false;
+      byte num2 = 0;
+      int x1 = 0;
+      int y1 = 0;
+      byte alpha1 = 0;
+      int width = 0;
+      int height = 0;
+      int x2 = 0;
+      int y2 = 0;
+      IntColor intColor1 = default(IntColor);
+      int y3 = 0;
+      byte num3 = 0;
+      byte num4 = 0;
+      int y4 = 0;
+      int x3 = 0;
+      int A_1_1 = 0;
+      int A_2 = 0;
+      int num5 = 0;
+      int y5 = 0;
+      int x4 = 0;
+      IndexImage indexImage = null;
+      int x5 = 0;
+      int x6 = 0;
+      int alphaBpp1 = 0;
+      int alphaBpp2 = 0;
+      int alphaBits = 0;
+      int y6 = 0;
+      byte num6 = 0;
+      int num7 = 0;
+      int num8 = 0;
+      int num9 = 0;
       while (true)
       {
-        bool flag;
-        byte num2;
-        int x1;
-        int y1;
-        byte alpha1;
-        int width;
-        int height;
-        int x2;
-        int y2;
-        IntColor intColor1;
-        int y3;
-        byte num3;
-        byte num4;
-        int y4;
-        int x3;
-        int A_1_1;
-        int A_2;
-        int num5;
-        int y5;
-        int x4;
-        IndexImage indexImage;
-        int x5;
-        int x6;
-        int alphaBpp1;
-        int alphaBpp2;
-        int alphaBits;
-        int y6;
-        byte num6;
-        int num7;
-        int num8;
-        int num9;
         switch (num1)
         {
           case 0:
@@ -1656,8 +1656,8 @@ label_2:
       bool flag1 = bitmapFile.HasValidIdentifier();
       bool flag2 = tgaFile.HasValidIdentifier();
       int num = 2;
-      bool flag3;
-      bool flag4;
+      bool flag3 = false;
+      bool flag4 = false;
       while (true)
       {
         switch (num)

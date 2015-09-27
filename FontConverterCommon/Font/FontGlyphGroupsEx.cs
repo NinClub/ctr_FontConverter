@@ -38,15 +38,15 @@ label_2:
       int num3 = BinaryFileHeader.Length + BinaryBlockHeader.Length + num2 + this.a();
       List<G2dFont.SheetSet>.Enumerator enumerator1 = this.SheetSetList.GetEnumerator();
       int num4 = 4;
-      List<G2dFont.SheetSet>.Enumerator enumerator2;
-      List<int>.Enumerator enumerator3;
-      List<G2dFont.SheetSet>.Enumerator enumerator4;
-      List<G2dFont.SheetSet>.Enumerator enumerator5;
-      int[] sizeCwdh;
-      int index1;
-      int[] sizeCmap;
-      int index2;
-      List<G2dFont.SheetSet>.Enumerator enumerator6;
+      List<G2dFont.SheetSet>.Enumerator enumerator2 = default(List<G2dFont.SheetSet>.Enumerator);
+      List<int>.Enumerator enumerator3 = default(List<int>.Enumerator);
+      List<G2dFont.SheetSet>.Enumerator enumerator4 = default(List<G2dFont.SheetSet>.Enumerator);
+      List<G2dFont.SheetSet>.Enumerator enumerator5 = default(List<G2dFont.SheetSet>.Enumerator);
+      int[] sizeCwdh = null;
+      int index1 = 0;
+      int[] sizeCmap = null;
+      int index2 = 0;
+      List<G2dFont.SheetSet>.Enumerator enumerator6 = default(List<G2dFont.SheetSet>.Enumerator);
       while (true)
       {
         switch (num4)

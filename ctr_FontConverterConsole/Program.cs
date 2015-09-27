@@ -12,11 +12,11 @@ namespace NintendoWare.Font
 {
   internal class Program
   {
-    private const string a = "h";
-    private const string b = "i";
-    private const string c = "f";
-    private const string d = "o";
-    private const string e = "ia";
+    private const string m_sa = "h";
+    private const string m_sb = "i";
+    private const string m_sc = "f";
+    private const string m_sd = "o";
+    private const string m_se = "ia";
     private const string f = "ic";
     private const string g = "if";
     private const string h = "ig";
@@ -138,10 +138,11 @@ label_2:
       List<Program.SymbolicValue> list = new List<Program.SymbolicValue>();
       list.Add(new Program.SymbolicValue("sjis", CharEncoding.SJIS));
       int num = 4;
+      string str1 = "";
+      string str2 = "";
+      string str3 = "";
       while (true)
       {
-        string str1;
-        string str2;
         switch (num)
         {
           case 0:
@@ -212,7 +213,7 @@ label_2:
           default:
             goto label_2;
         }
-        string str3 = str2;
+        str3 = str2;
         num = 15;
         continue;
 label_20:
@@ -239,7 +240,7 @@ label_23:
       FontReader fontReader = (FontReader) null;
       FontWriter fontWriter = (FontWriter) null;
       Rpt.InitForConsole();
-      int num1;
+      int num1 = 0;
       try
       {
 label_5:
@@ -338,8 +339,8 @@ label_2:
       Program.SymbolicValue[] symbolicValueArray = A_0;
       int index = 0;
       int num1 = 3;
-      Program.SymbolicValue symbolicValue;
-      int num2;
+      Program.SymbolicValue symbolicValue = null;
+      int num2 = 0;
       while (true)
       {
         switch (num1)
@@ -405,8 +406,8 @@ label_13:
     private static ushort a(string A_0, CharEncoding A_1)
     {
       int num1 = 1;
-      ushort c;
-      ushort num2;
+      ushort c = 0;
+      ushort num2 = 0;
       while (true)
       {
         switch (num1)
@@ -461,7 +462,7 @@ label_10:
     private static GlyphImageFormat c(string A_0)
     {
       int num1 = 2;
-      int num2;
+      int num2 = 0;
       while (true)
       {
         switch (num1)
@@ -535,6 +536,8 @@ label_10:
 
     private static void a(string A_0, out int A_1, out bool A_2)
     {
+      A_1 = 0;
+      A_2 = false;
 label_2:
       int length = A_0.Length;
       int num = 1;
@@ -664,10 +667,10 @@ label_28:
     private static FontReader b(CmdLine A_0)
     {
       int num1 = 19;
-      int avgwidth;
-      int A_1;
-      bool A_2;
-      WidthType wt;
+      int avgwidth = 0;
+      int A_1 = 0;
+      bool A_2 = false;
+      WidthType wt = default(WidthType);
       while (true)
       {
         int num2;
@@ -787,34 +790,34 @@ label_33:
     private static FontWriter a(CmdLine A_0)
     {
       int num1 = 44;
-      string file;
-      string order;
-      bool isDrawGrid;
-      int cellWidth;
-      int cellHeight;
-      int num2;
-      int marginRight;
-      int num3;
-      int marginBottom;
-      ImageFileFormat format;
-      IntColor intColor1;
-      IntColor intColor2;
-      IntColor intColor3;
-      IntColor intColor4;
-      CharEncoding charEncoding;
-      int sheetPixels;
-      int A_0_1;
-      int A_1;
+      string file = "";
+      string order = "";
+      bool isDrawGrid = false;
+      int cellWidth = 0;
+      int cellHeight = 0;
+      int num2 = 0;
+      int marginRight = 0;
+      int num3 = 0;
+      int marginBottom = 0;
+      ImageFileFormat format = default(ImageFileFormat);
+      IntColor intColor1 = default(IntColor);
+      IntColor intColor2 = default(IntColor);
+      IntColor intColor3 = default(IntColor);
+      IntColor intColor4 = default(IntColor);
+      CharEncoding charEncoding = default(CharEncoding);
+      int sheetPixels = 0;
+      int A_0_1 = 0;
+      int A_1 = 0;
+      bool flag = false;
+      int num4 = 0;
+      IntColor intColor5 = default(IntColor);
+      int num5 = 0;
+      IntColor intColor6 = default(IntColor);
+      IntColor intColor7 = default(IntColor);
+      IntColor intColor8 = default(IntColor);
+      int num6 = 0;
       while (true)
       {
-        bool flag;
-        int num4;
-        IntColor intColor5;
-        int num5;
-        IntColor intColor6;
-        IntColor intColor7;
-        IntColor intColor8;
-        int num6;
         switch (num1)
         {
           case 0:
@@ -1209,7 +1212,7 @@ label_2:
       Program.SymbolicValue[] symbolicValueArray = A_0;
       int index = 0;
       int num = 4;
-      Program.SymbolicValue symbolicValue;
+      Program.SymbolicValue symbolicValue = null;
       while (true)
       {
         switch (num)
@@ -1261,8 +1264,8 @@ label_2:
       Program.SymbolicValue[] symbolicValueArray = A_0;
       int index = 0;
       int num = 0;
-      Program.SymbolicValue symbolicValue;
-      string str;
+      Program.SymbolicValue symbolicValue = null;
+      string str = "";
       while (true)
       {
         switch (num)

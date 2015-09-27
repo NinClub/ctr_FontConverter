@@ -29,7 +29,7 @@ namespace NintendoWare.Font
     public override bool LetterChar(Glyph glyph, ushort c)
     {
       int num1 = 3;
-      bool flag1;
+      bool flag1 = false;
       while (true)
       {
         switch (num1)
@@ -67,7 +67,7 @@ label_5:
 label_6:
       return false;
 label_11:
-      bool flag2;
+      bool flag2 = false;
       try
       {
 label_13:
@@ -198,9 +198,9 @@ label_19:
 label_2:
       this.CleanupFont();
       int num1 = 11;
+      IntPtr num2 = default(IntPtr);
       while (true)
       {
-        IntPtr num2;
         switch (num1)
         {
           case 0:
@@ -281,8 +281,8 @@ label_23:;
     private static bool a(IntPtr A_0, int A_1, int A_2, uint A_3, bool A_4)
     {
       int num = 0;
-      byte[] lpString1;
-      int c;
+      byte[] lpString1 = null;
+      int c = 0;
       while (true)
       {
         switch (num)
@@ -351,8 +351,8 @@ label_2:
       int diBits = Gdi.GetDIBits(this.DeviceContext, this.f, 0U, (uint) this.CellSize, A_0, lpbmi, DIB.RGB_COLORS);
       Gdi.SelectBitmap(this.DeviceContext, this.f);
       int num1 = 10;
-      int index;
-      uint num2;
+      int index = 0;
+      uint num2 = 0;
       while (true)
       {
         switch (num1)
@@ -439,8 +439,8 @@ label_2:
       A_4.BmpWidth = A_2;
       int num5 = 0;
       int num6 = 14;
-      int index2;
-      int num7;
+      int index2 = 0;
+      int num7 = 0;
       while (true)
       {
         switch (num6)

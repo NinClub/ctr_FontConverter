@@ -88,7 +88,7 @@ label_10:
 label_2:
       HandlerBase.AttributeList attributes = new HandlerBase.AttributeList(reader);
       int num = 7;
-      XmlNodeType nodeType;
+      XmlNodeType nodeType = default(XmlNodeType);
       while (true)
       {
         switch (num)

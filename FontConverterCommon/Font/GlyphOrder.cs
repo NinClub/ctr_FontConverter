@@ -163,7 +163,7 @@ label_16:;
 label_7:
       throw GlCm.ErrMsg(ErrorType.Xml, Strings.IDS_ERR_INVALID_ORDER_WIDTH, (object) this.p);
 label_8:
-      throw GlCm.ErrMsg(ErrorType.Xml, Strings.IDS_ERR_INVALID_ORDER_HEIGHT, (object) (bool) (this.r ? 1 : 0));
+      throw GlCm.ErrMsg(ErrorType.Xml, Strings.IDS_ERR_INVALID_ORDER_HEIGHT, (object) /*(bool) (*/this.r/* ? 1 : 0)*/);
 label_27:
       this.s = true;
     }
@@ -171,7 +171,7 @@ label_27:
     public ushort GetCharCode(int x, int y)
     {
       int num = 8;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)
@@ -238,10 +238,10 @@ label_18:
     protected override void StartElement(string name, HandlerBase.AttributeList attributes)
     {
       int num = 20;
-      string s1;
-      string str1;
-      bool flag;
-      string s2;
+      string s1 = "";
+      string str1 = "";
+      bool flag = false;
+      string s2 = "";
       while (true)
       {
         switch (num)
@@ -474,7 +474,7 @@ label_65:
     protected override void Characters(string chars, int length)
     {
       int num = 8;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)

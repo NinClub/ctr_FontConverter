@@ -38,8 +38,8 @@ namespace NintendoWare.Font
     public bool IsFiltered(ushort c)
     {
       int num = 3;
-      bool flag1;
-      bool flag2;
+      bool flag1 = false;
+      bool flag2 = false;
       while (true)
       {
         switch (num)
@@ -170,15 +170,15 @@ label_2:
       int hnum = order.GetHNum();
       int vnum = order.GetVNum();
       int num = 13;
+      ushort charCode1 = 0;
+      CharFilter.OutputGlyphList outputGlyphList = null;
+      int y1 = 0;
+      int x1 = 0;
+      int x2 = 0;
+      int y2 = 0;
+      ushort charCode2 = 0;
       while (true)
       {
-        ushort charCode1;
-        CharFilter.OutputGlyphList outputGlyphList;
-        int y1;
-        int x1;
-        int x2;
-        int y2;
-        ushort charCode2;
         switch (num)
         {
           case 0:
@@ -340,9 +340,9 @@ label_39:;
       using (Dictionary<ushort, bool>.Enumerator enumerator = this.i.GetEnumerator())
       {
         int num = 3;
+        KeyValuePair<ushort, bool> current = default(KeyValuePair<ushort, bool>);
         while (true)
         {
-          KeyValuePair<ushort, bool> current;
           switch (num)
           {
             case 0:
@@ -392,7 +392,7 @@ label_15:;
     protected override void StartElement(string name, HandlerBase.AttributeList attributes)
     {
       int num = 15;
-      string str;
+      string str = "";
       while (true)
       {
         switch (num)
@@ -532,7 +532,7 @@ label_39:
     protected override void Characters(string chars, int length)
     {
       int num = 7;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)

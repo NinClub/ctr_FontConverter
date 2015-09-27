@@ -201,11 +201,11 @@ label_7:
 label_2:
       Type type = A_1.GetType();
       int num1 = 2;
-      IEnumerator enumerator;
-      FieldInfo[] fields;
-      int index;
-      Type elementType;
-      MarshalAsAttribute marshalAsAttribute;
+      IEnumerator enumerator = null;
+      FieldInfo[] fields = null;
+      int index = 0;
+      Type elementType = null;
+      MarshalAsAttribute marshalAsAttribute = null;
       while (true)
       {
         switch (num1)
@@ -449,15 +449,15 @@ label_2:
           case 0:
             goto label_5;
           case 1:
-            num = A_0_1 != typeof (short) ? 10 : 8;
+            num = A_0 != typeof (short) ? 10 : 8;
             continue;
           case 2:
             goto label_8;
           case 3:
-            num = A_0_1 != typeof (int) ? 4 : 5;
+            num = A_0 != typeof (int) ? 4 : 5;
             continue;
           case 4:
-            if (A_0_1 == typeof (uint))
+            if (A_0 == typeof (uint))
             {
               num = 15;
               continue;
@@ -470,7 +470,7 @@ label_2:
             num = 2;
             continue;
           case 7:
-            num = A_0_1 != typeof (byte) ? 1 : 6;
+            num = A_0 != typeof (byte) ? 1 : 6;
             continue;
           case 8:
             num = 12;
@@ -478,7 +478,7 @@ label_2:
           case 9:
             goto label_22;
           case 10:
-            num = A_0_1 != typeof (ushort) ? 3 : 11;
+            num = A_0 != typeof (ushort) ? 3 : 11;
             continue;
           case 11:
             num = 16;
@@ -496,7 +496,7 @@ label_2:
           case 16:
             goto label_14;
           case 17:
-            num = A_0_1 != typeof (sbyte) ? 7 : 13;
+            num = A_0 != typeof (sbyte) ? 7 : 13;
             continue;
           default:
             goto label_2;
@@ -523,7 +523,7 @@ label_22:
       Array.ForEach<uint>((uint[]) A_1, (Action<uint>) (A_0_2 => this.Write(A_0_2)));
       return;
 label_23:
-      throw new InvalidOperationException(string.Format("Unsupport type. - {0}", (object) A_0_1));
+      throw new InvalidOperationException(string.Format("Unsupport type. - {0}", (object) A_0));
     }
   }
 }

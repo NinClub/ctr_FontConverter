@@ -158,9 +158,9 @@ label_2:
       ushort A_5 = body.AlterCharIndex;
       A_0.LineHeight = new int?((int) body.Linefeed);
       int num = 4;
-      NnsData.GeneralBinaryBlockInfo block1;
-      NnsData.GeneralBinaryBlockInfo block2;
-      CharEncoding A_4;
+      NnsData.GeneralBinaryBlockInfo block1 = null;
+      NnsData.GeneralBinaryBlockInfo block2 = null;
+      CharEncoding A_4 = default(CharEncoding);
       while (true)
       {
         switch (num)
@@ -229,21 +229,21 @@ label_2:
       bool flag = ((int) A_3.Body.SheetFormat & 32768) != 0;
       ushort num1 = (ushort) ((uint) A_3.Body.SheetFormat & (uint) short.MaxValue);
       int num2 = 11;
+      byte[] numArray = null;
+      ByteOrderBinaryReader orderBinaryReader = null;
+      byte[] dst = null;
+      int offset = 0;
+      int dstOffs = 0;
+      int num3 = 0;
+      GlyphImageFormat A_2_1 = default(GlyphImageFormat);
+      int width = 0;
+      int height = 0;
+      int num4 = 0;
+      ushort glyphIndex = 0;
+      ushort A_5_1 = 0;
+      int num5 = 0;
       while (true)
       {
-        byte[] numArray;
-        ByteOrderBinaryReader orderBinaryReader;
-        byte[] dst;
-        int offset;
-        int dstOffs;
-        int num3;
-        GlyphImageFormat A_2_1;
-        int width;
-        int height;
-        int num4;
-        ushort glyphIndex;
-        ushort A_5_1;
-        int num5;
         switch (num2)
         {
           case 0:
@@ -288,7 +288,7 @@ label_2:
             continue;
           case 8:
             orderBinaryReader = new ByteOrderBinaryReader((Stream) new MemoryStream(numArray), true);
-            dst = new byte[(IntPtr) (A_3.Body.SheetSize * (uint) A_3.Body.SheetNum)];
+            dst = new byte[/*(IntPtr) */(A_3.Body.SheetSize * (uint) A_3.Body.SheetNum)];
             offset = 0;
             dstOffs = 0;
             num3 = 0;
@@ -360,7 +360,7 @@ label_26:;
 label_2:
       NintendoWare.Font.Revolution.TextureFormat textureFormat = A_0;
       int num = 4;
-      GlyphImageFormat glyphImageFormat;
+      GlyphImageFormat glyphImageFormat = default(GlyphImageFormat);
       while (true)
       {
         switch (num)
@@ -430,7 +430,7 @@ label_15:
 label_2:
       NintendoWare.Font.Ctr.TextureFormat textureFormat = A_0;
       int num = 8;
-      GlyphImageFormat glyphImageFormat;
+      GlyphImageFormat glyphImageFormat = default(GlyphImageFormat);
       while (true)
       {
         switch (num)
@@ -547,8 +547,8 @@ label_2:
       A_0.BaselinePos = new int?((int) A_3.BaselinePos);
       int num1 = 0;
       int num2 = 1;
-      ushort glyphIndex;
-      ushort A_4_1;
+      ushort glyphIndex = 0;
+      ushort A_4_1 = 0;
       while (true)
       {
         switch (num2)
@@ -840,9 +840,9 @@ label_2:
       byte[] buffer = new byte[pixelPicker.BlockPixelNum * 2];
       int num1 = 0;
       int num2 = 3;
-      int num3;
-      ByteOrderBinaryReader orderBinaryReader2;
-      int pos;
+      int num3 = 0;
+      ByteOrderBinaryReader orderBinaryReader2 = null;
+      int pos = 0;
       while (true)
       {
         switch (num2)
@@ -936,7 +936,7 @@ label_2:
         if (1 == 0)
           ;
         int num = 2;
-        int right;
+        int right = 0;
         while (true)
         {
           switch (num)
@@ -973,7 +973,7 @@ label_2:
         if (1 == 0)
           ;
         int num = 3;
-        int right;
+        int right = 0;
         while (true)
         {
           switch (num)

@@ -95,18 +95,18 @@ namespace NintendoWare.Font
     public void ReflectGlyph()
     {
       int num1 = 15;
-      int? lineHeight;
-      int? ascent;
-      int A_0_1;
-      int A_0_2;
-      int A_0_3;
-      int A_0_4;
-      IEnumerator<Glyph> enumerator;
-      CharWidths? defaultWidth;
-      IntColor? nullColor;
-      GlyphImageFormat? outputFormat;
-      int? width;
-      int? descent;
+      int? lineHeight = null;
+      int? ascent = null;
+      int A_0_1 = 0;
+      int A_0_2 = 0;
+      int A_0_3 = 0;
+      int A_0_4 = 0;
+      IEnumerator<Glyph> enumerator = null;
+      CharWidths? defaultWidth = null;
+      IntColor? nullColor = null;
+      GlyphImageFormat? outputFormat = null;
+      int? width = null;
+      int? descent = null;
       while (true)
       {
         switch (num1)
@@ -123,7 +123,7 @@ namespace NintendoWare.Font
             try
             {
               int num2 = 6;
-              Glyph current;
+              Glyph current = null;
               while (true)
               {
                 switch (num2)

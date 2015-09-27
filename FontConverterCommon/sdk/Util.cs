@@ -71,9 +71,9 @@ label_2:
       Util.i = (byte) 1;
       int A_1 = srcSize;
       int num2 = 19;
-      int startIndex;
-      char[] chArray2;
-      char ch;
+      int startIndex = 0;
+      char[] chArray2 = null;
+      char ch = '\0';
       while (true)
       {
         switch (num2)
@@ -262,7 +262,7 @@ label_2:
       Util.a(huffCompressionInfo.huffTable, A_0, A_1, A_3);
       Util.a(huffCompressionInfo, A_3);
       int num1 = 4;
-      int num2;
+      int num2 = 0;
       while (true)
       {
         switch (num1)
@@ -317,9 +317,9 @@ label_2:
       Util.HuffData[] huffDataArray = A_0.huffTable;
       int index1 = 0;
       int num2 = 3;
-      byte[] numArray;
-      int index2;
-      Util.HuffTreeCtrlData[] huffTreeCtrlDataArray;
+      byte[] numArray = null;
+      int index2 = 0;
+      Util.HuffTreeCtrlData[] huffTreeCtrlDataArray = null;
       while (true)
       {
         switch (num2)
@@ -374,8 +374,8 @@ label_13:;
     private static void a(Util.HuffData[] A_0, byte[] A_1, int A_2, byte A_3)
     {
       int num = 9;
-      int index1;
-      int index2;
+      int index1 = 0;
+      int index2 = 0;
       while (true)
       {
         switch (num)
@@ -459,7 +459,7 @@ label_2:
       int index1 = -1;
       int index2 = -1;
       int num3 = 31;
-      int index3;
+      int index3 = 0;
       while (true)
       {
         switch (num3)
@@ -756,8 +756,8 @@ label_8:;
 label_2:
       ushort num1 = A_0[(int) A_1].LeafDepth;
       int num2 = 4;
-      ushort num3;
-      ushort num4;
+      ushort num3 = 0;
+      ushort num4 = 0;
       while (true)
       {
         switch (num2)
@@ -808,14 +808,14 @@ label_2:
       A_0.huffTreeCtrl[0].leftOffsetNeed = (byte) 0;
       A_0.huffTreeCtrl[0].rightNodeNo = A_1;
       int num2 = 5;
-      short num3;
-      short num4;
-      short num5;
-      bool A_2_2;
-      short num6;
-      ushort num7;
-      ushort num8;
-      int num9;
+      short num3 = 0;
+      short num4 = 0;
+      short num5 = 0;
+      bool A_2_2 = false;
+      short num6 = 0;
+      ushort num7 = 0;
+      ushort num8 = 0;
+      int num9 = 0;
       while (true)
       {
         switch (num2)
@@ -1280,7 +1280,7 @@ label_2:
       Util.HuffTreeCtrlData[] huffTreeCtrlDataArray = A_0.huffTreeCtrl;
       ushort num2 = A_0.huffTreeTop;
       int num3 = 7;
-      ushort num4;
+      ushort num4 = 0;
       while (true)
       {
         switch (num3)
@@ -1428,10 +1428,10 @@ label_2:
       int num3 = 0;
       int index1 = 0;
       int num4 = 17;
-      int num5;
-      int num6;
-      byte num7;
-      int index2;
+      int num5 = 0;
+      int num6 = 0;
+      byte num7 = 0;
+      int index2 = 0;
       while (true)
       {
         switch (num4)
@@ -1607,11 +1607,11 @@ label_2:
       byte[] numArray = new byte[64];
       int index2 = 0;
       int num4 = 10;
+      int num5 = 0;
+      int num6 = 0;
+      int num7 = 0;
       while (true)
       {
-        int num5;
-        int num6;
-        int num7;
         switch (num4)
         {
           case 0:
@@ -1748,7 +1748,7 @@ label_37:
     private static int a(byte[] A_0, int A_1, int A_2, byte[] A_3, int A_4, int A_5)
     {
       int num1 = 1;
-      uint num2;
+      uint num2 = 0;
       while (true)
       {
         switch (num1)
@@ -1803,11 +1803,11 @@ label_2:
       ushort num5 = (ushort) 1;
       byte num6 = A_0[A_1 + 1];
       int num7 = 14;
+      byte num8 = 0;
+      ushort num9 = 0;
+      uint num10 = 0;
       while (true)
       {
-        byte num8;
-        ushort num9;
-        uint num10;
         switch (num7)
         {
           case 0:
@@ -1937,7 +1937,7 @@ label_2:
             uint num14 = (uint) (num12 + num13);
             long num15 = (long) (uint) num12;
             IntPtr index1 = checked ((IntPtr) unchecked (num11 + num15));
-            int num16 = (int) numArray1[index1];
+            int num16 = (int) numArray1[index1.ToInt32()];
             byte[] numArray2 = A_0;
             long num17 = (long) A_1;
             int num18 = (int) num14;
@@ -1945,7 +1945,7 @@ label_2:
             uint num20 = (uint) (num18 + num19);
             long num21 = (long) (uint) num18;
             IntPtr index2 = checked ((IntPtr) unchecked (num17 + num21));
-            int num22 = (int) numArray2[index2] << 8;
+            int num22 = (int) numArray2[index2.ToInt32()] << 8;
             int num23 = num16 | num22;
             byte[] numArray3 = A_0;
             long num24 = (long) A_1;
@@ -1954,7 +1954,7 @@ label_2:
             uint num27 = (uint) (num25 + num26);
             long num28 = (long) (uint) num25;
             IntPtr index3 = checked ((IntPtr) unchecked (num24 + num28));
-            int num29 = (int) numArray3[index3] << 16;
+            int num29 = (int) numArray3[index3.ToInt32()] << 16;
             int num30 = num23 | num29;
             byte[] numArray4 = A_0;
             long num31 = (long) A_1;
@@ -1963,7 +1963,7 @@ label_2:
             num3 = (uint) (num32 + num33);
             long num34 = (long) (uint) num32;
             IntPtr index4 = checked ((IntPtr) unchecked (num31 + num34));
-            int num35 = (int) numArray4[index4] << 24;
+            int num35 = (int) numArray4[index4.ToInt32()] << 24;
             num10 = (uint) (num30 | num35);
             num7 = 15;
             continue;
@@ -2016,10 +2016,10 @@ label_2:
       Util.i = (byte) 1;
       Array.Copy((Array) src, srcOffs, (Array) A_0, 0, srcSize);
       int num3 = 25;
-      uint num4;
-      byte num5;
-      uint num6;
-      sbyte num7;
+      uint num4 = 0;
+      byte num5 = 0;
+      uint num6 = 0;
+      sbyte num7 = 0;
       while (true)
       {
         switch (num3)

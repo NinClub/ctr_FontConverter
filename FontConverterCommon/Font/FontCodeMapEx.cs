@@ -36,10 +36,10 @@ label_2:
       br.Read<FontCodeMap>(out this.a);
       FontMapMethod fontMapMethod = (FontMapMethod) this.a.MappingMethod;
       int num = 3;
-      CMapInfoScanEx cmapInfoScanEx;
-      int index1;
-      int index2;
-      int length;
+      CMapInfoScanEx cmapInfoScanEx = null;
+      int index1 = 0;
+      int index2 = 0;
+      int length = 0;
       while (true)
       {
         switch (num)
@@ -127,10 +127,10 @@ label_19:
 label_2:
       bw.Write((object) this.a);
       int num1 = 1;
-      ushort[] mapInfo;
-      int index1;
-      CMapScanEntry[] entries;
-      int index2;
+      ushort[] mapInfo = null;
+      int index1 = 0;
+      CMapScanEntry[] entries = null;
+      int index2 = 0;
       while (true)
       {
         switch (num1)

@@ -31,21 +31,21 @@ label_2:
       GLYPHMETRICS A_3 = new GLYPHMETRICS();
       bool flag = this.IsGlyphExists(c);
       int num1 = 3;
-      byte[] array;
-      Letterer.GlyphInfo glyphInfo;
-      IndexImage indexImage;
+      byte[] array = null;
+      Letterer.GlyphInfo glyphInfo = null;
+      IndexImage indexImage = null;
+      int index = 0;
+      int num2 = 0;
+      ABC[] pabc = null;
+      bool charWidth32U = false;
+      int A_2 = 0;
+      uint num3 = 0;
+      uint num4 = 0;
+      bool charAbcWidthsU = false;
+      int num5 = 0;
+      long num6 = 0;
       while (true)
       {
-        int index;
-        int num2;
-        ABC[] pabc;
-        bool charWidth32U;
-        int A_2;
-        uint num3;
-        uint num4;
-        bool charAbcWidthsU;
-        int num5;
-        long num6;
         switch (num1)
         {
           case 0:
@@ -320,20 +320,20 @@ label_6:;
     private void a(IndexImage A_0, int A_1, int A_2, byte[] A_3)
     {
       int num1 = 23;
+      int num2 = 0;
+      int index1 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      int x1 = 0;
+      int y1 = 0;
+      int x2 = 0;
+      int index2 = 0;
+      int num5 = 0;
+      int y2 = 0;
+      int num6 = 0;
+      int num7 = 0;
       while (true)
       {
-        int num2;
-        int index1;
-        int num3;
-        int num4;
-        int x1;
-        int y1;
-        int x2;
-        int index2;
-        int num5;
-        int y2;
-        int num6;
-        int num7;
         switch (num1)
         {
           case 0:
@@ -475,17 +475,17 @@ label_2:
       bool flag2 = (A_1.BmpHeight - A_1.GlyphAscent) % 2 != 0;
       int bmpWidth1 = A_1.BmpWidth;
       int num1 = 4;
+      int num2 = 0;
+      int index = 0;
+      int num3 = 0;
+      int bmpWidth2 = 0;
+      bool flag3 = false;
+      int bmpHeight = 0;
+      int num4 = 0;
+      int num5 = 0;
+      int num6 = 0;
       while (true)
       {
-        int num2;
-        int index;
-        int num3;
-        int bmpWidth2;
-        bool flag3;
-        int bmpHeight;
-        int num4;
-        int num5;
-        int num6;
         switch (num1)
         {
           case 0:

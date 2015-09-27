@@ -24,7 +24,7 @@ namespace NintendoWare.Font
     public ImageBase Load()
     {
       BinaryFile binaryFile = BinaryFile.Open(this.c, FileMode.Open, FileAccess.Read);
-      ImageBase imageBase;
+      ImageBase imageBase = null;
       try
       {
 label_3:
@@ -35,10 +35,10 @@ label_3:
         this.a(A_1_1);
         bool isIndex = A_1_1.IsIndex;
         int num = 15;
-        int A_4;
-        int count1;
-        byte[] numArray1;
-        byte[] numArray2;
+        int A_4 = 0;
+        int count1 = 0;
+        byte[] numArray1 = null;
+        byte[] numArray2 = null;
         while (true)
         {
           switch (num)
@@ -179,10 +179,10 @@ label_2:
       int length1 = 0;
       int count = 0;
       int num1 = 4;
-      IndexImage indexImage;
-      int index1;
-      byte[] numArray1;
-      ByteOrderBinaryWriter orderBinaryWriter;
+      IndexImage indexImage = null;
+      int index1 = 0;
+      byte[] numArray1 = null;
+      ByteOrderBinaryWriter orderBinaryWriter = null;
       while (true)
       {
         switch (num1)
@@ -565,12 +565,12 @@ label_2:
       int A_1_1 = 0;
       int num1 = 0;
       int num2 = 9;
-      int A_3_1;
-      int A_5;
-      int num3;
-      int num4;
-      bool flag1;
-      bool flag2;
+      int A_3_1 = 0;
+      int A_5 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      bool flag1 = false;
+      bool flag2 = false;
       while (true)
       {
         switch (num2)
@@ -684,8 +684,8 @@ label_2:
       int destinationIndex = 0;
       int num1 = 0;
       int num2 = 5;
-      int sourceIndex;
-      int num3;
+      int sourceIndex = 0;
+      int num3 = 0;
       while (true)
       {
         switch (num2)
@@ -767,7 +767,7 @@ label_21:;
     private static bool a(byte[] A_0, string A_1)
     {
       int num = 0;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)
@@ -904,8 +904,8 @@ label_10:
       if (1 == 0)
         ;
       int num = Marshal.SizeOf(typeof (TgaFile.TgaFileFooter));
-      A_0_1.Seek(-num, SeekOrigin.End);
-      A_0_1.Read<TgaFile.TgaFileFooter>(out A_1);
+      A_0.Seek(-num, SeekOrigin.End);
+      A_0.Read<TgaFile.TgaFileFooter>(out A_1);
       Array.ForEach<byte>(A_1.Signature, (Action<byte>) (A_0_2 => {}));
     }
 
@@ -921,15 +921,15 @@ label_2:
       A_0.Read(buffer, 0, count);
       int index2 = 0;
       int num3 = 2;
+      int num4 = 0;
+      int num5 = 0;
+      int num6 = 0;
+      int num7 = 0;
+      byte num8 = 0;
+      int num9 = 0;
+      int num10 = 0;
       while (true)
       {
-        int num4;
-        int num5;
-        int num6;
-        int num7;
-        byte num8;
-        int num9;
-        int num10;
         switch (num3)
         {
           case 0:
@@ -1047,10 +1047,10 @@ label_27:
     private void b(TgaFile.TgaFileHeader A_0)
     {
       int num1 = 2;
+      int num2 = 0;
+      int num3 = 0;
       while (true)
       {
-        int num2;
-        int num3;
         switch (num1)
         {
           case 0:
@@ -1370,9 +1370,9 @@ label_2:
       int sourceIndex = 0;
       int destinationIndex = 0;
       int num2 = 2;
-      int num3;
-      int num4;
-      byte num5;
+      int num3 = 0;
+      int num4 = 0;
+      byte num5 = 0;
       while (true)
       {
         switch (num2)

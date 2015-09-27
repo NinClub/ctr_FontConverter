@@ -106,7 +106,7 @@ label_7:;
     protected string ConvertGroupName(string str)
     {
       int num = 2;
-      Match match;
+      Match match = null;
       while (true)
       {
         switch (num)
@@ -146,11 +146,11 @@ label_10:
     protected override void StartElement(string name, HandlerBase.AttributeList attributes)
     {
       int num = 3;
-      GlyphGroups.Group group;
-      string str1;
-      string str2;
-      string s;
-      int result;
+      GlyphGroups.Group group = null;
+      string str1 = "";
+      string str2 = "";
+      string s = "";
+      int result = 0;
       while (true)
       {
         switch (num)
@@ -329,7 +329,7 @@ label_49:
     protected override void Characters(string chars, int length)
     {
       int num = 6;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)
@@ -441,10 +441,10 @@ label_14:;
       using (List<GlyphGroups.Group>.Enumerator enumerator = A_0.GetEnumerator())
       {
         int num = 12;
-        GlyphGroups.Group current;
+        GlyphGroups.Group current = null;
+        bool flag = false;
         while (true)
         {
-          bool flag;
           switch (num)
           {
             case 0:

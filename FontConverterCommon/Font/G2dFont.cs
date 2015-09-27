@@ -58,7 +58,7 @@ label_2:
       fontGlyphGroupsEx.SizeCWDH = new int[(int) num1];
       int no1 = 0;
       int num3 = 1;
-      int no2;
+      int no2 = 0;
       while (true)
       {
         switch (num3)
@@ -203,15 +203,15 @@ label_2:
       int blockOffset = BinaryFileHeader.Length;
       NnsData.GeneralBinaryBlockInfo block1 = this.GetBlock(RtConsts.BinBlockSigGLGR);
       int num1 = 22;
-      int no1;
-      int no2;
-      NnsData.GeneralBinaryBlockInfo block2;
-      int num2;
-      int no3;
-      NnsData.GeneralBinaryBlockInfo block3;
-      int num3;
-      int num4;
-      int no4;
+      int no1 = 0;
+      int no2 = 0;
+      NnsData.GeneralBinaryBlockInfo block2 = null;
+      int num2 = 0;
+      int no3 = 0;
+      NnsData.GeneralBinaryBlockInfo block3 = null;
+      int num3 = 0;
+      int num4 = 0;
+      int no4 = 0;
       while (true)
       {
         switch (num1)
@@ -399,12 +399,12 @@ label_12:
       try
       {
         int num = 28;
-        FontInformationEx fontInformationEx;
-        FontCodeMapEx fontCodeMapEx;
-        NnsData.BlockList blockList;
-        int index;
-        NnsData.GeneralBinaryBlockInfo generalBinaryBlockInfo;
-        FontWidthEx fontWidthEx;
+        FontInformationEx fontInformationEx = null;
+        FontCodeMapEx fontCodeMapEx = null;
+        NnsData.BlockList blockList = null;
+        int index = 0;
+        NnsData.GeneralBinaryBlockInfo generalBinaryBlockInfo = null;
+        FontWidthEx fontWidthEx = null;
         while (true)
         {
           switch (num)
@@ -553,10 +553,10 @@ label_2:
       NnsData.GeneralBinaryBlockInfo block = this.GetBlock(RtConsts.BinBlockSigCMAP);
       int no = 0;
       int num1 = 9;
-      ushort num2;
+      ushort num2 = 0;
+      FontCodeMapEx A_0 = null;
       while (true)
       {
-        FontCodeMapEx A_0;
         switch (num1)
         {
           case 0:
@@ -625,12 +625,12 @@ label_3:
       NnsData.GeneralBinaryBlockInfo block = this.GetBlock(RtConsts.BinBlockSigCWDH);
       int no = 0;
       int num = 5;
-      FontWidthEx fontWidthEx;
+      FontWidthEx fontWidthEx = null;
+      FontWidth body = null;
       while (true)
       {
         if (1 == 0)
           ;
-        FontWidth body;
         switch (num)
         {
           case 0:
@@ -814,10 +814,10 @@ label_2:
       FontCodeMap body = A_0.Body;
       FontMapMethod fontMapMethod = (FontMapMethod) body.MappingMethod;
       int num2 = 4;
-      int index1;
-      int num3;
-      int num4;
-      CMapScanEntry[] entries;
+      int index1 = 0;
+      int num3 = 0;
+      int num4 = 0;
+      CMapScanEntry[] entries = null;
       while (true)
       {
         switch (num2)

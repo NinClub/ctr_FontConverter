@@ -10,15 +10,15 @@ namespace NintendoWare.Font
 {
   internal class CmdLine
   {
-    private readonly CmdLine.OptionMap a = new CmdLine.OptionMap();
-    private readonly StringList b = new StringList();
+    private readonly CmdLine.OptionMap m_a = new CmdLine.OptionMap();
+    private readonly StringList m_b = new StringList();
 
     public string this[string name]
     {
       get
       {
         StringList stringList;
-        if (!this.a.TryGetValue(name, out stringList))
+        if (!this.m_a.TryGetValue(name, out stringList))
           return string.Empty;
         if (1 == 0)
           ;
@@ -33,13 +33,13 @@ namespace NintendoWare.Font
 
     public bool Exists(string name)
     {
-      return this.a.ContainsKey(name);
+      return this.m_a.ContainsKey(name);
     }
 
     public int Number(string name, int def)
     {
       StringList stringList;
-      if (!this.a.TryGetValue(name, out stringList))
+      if (!this.m_a.TryGetValue(name, out stringList))
         return def;
       if (1 == 0)
         ;
@@ -48,7 +48,7 @@ namespace NintendoWare.Font
 
     public int GetNum()
     {
-      return this.a.Count;
+      return this.m_a.Count;
     }
 
     private bool b(char A_0)
@@ -105,15 +105,15 @@ label_10:
 label_2:
       int A_1_1 = 0;
       int num = 18;
-      string A_0_1;
-      bool flag1;
-      CmdLine.OptionDef A_3;
-      bool flag2;
-      bool flag3;
-      string str1;
-      string str2;
-      int index;
-      CmdLine.Option option;
+      string A_0_1 = "";
+      bool flag1 = false;
+      CmdLine.OptionDef A_3 = default(CmdLine.OptionDef);
+      bool flag2 = false;
+      bool flag3 = false;
+      string str1 = "";
+      string str2 = "";
+      int index = 0;
+      CmdLine.Option option = default(CmdLine.Option);
       while (true)
       {
         switch (num)
@@ -169,11 +169,11 @@ label_2:
             num = 24;
             continue;
           case 9:
-            StringList stringList1 = this.a[A_0_1];
+            StringList stringList1 = this.m_a[A_0_1];
             num = 0;
             continue;
           case 10:
-            this.a[A_0_1].Add(str2);
+            this.m_a[A_0_1].Add(str2);
             A_1_1 += str2.Length;
             num = 19;
             continue;
@@ -232,7 +232,7 @@ label_2:
               continue;
             }
             A_1_1 += str1.Length;
-            this.b.Add(str1);
+            this.m_b.Add(str1);
             num = 32;
             continue;
           case 26:
@@ -244,7 +244,7 @@ label_2:
             switch (option)
             {
               case CmdLine.Option.None:
-                StringList stringList2 = this.a[A_0_1];
+                StringList stringList2 = this.m_a[A_0_1];
                 num = 39;
                 continue;
               case CmdLine.Option.LTOne:
@@ -365,7 +365,7 @@ label_10:
 label_2:
       bool flag = false;
       int num = 3;
-      int index;
+      int index = 0;
       while (true)
       {
         switch (num)
@@ -472,7 +472,7 @@ label_22:
         get
         {
           int num = 1;
-          StringList stringList;
+          StringList stringList = null;
           while (true)
           {
             switch (num)

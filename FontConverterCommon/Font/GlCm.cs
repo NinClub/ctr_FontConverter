@@ -75,8 +75,8 @@ label_2:
         A_1
       }, 1, lpMultiByteStr, lpMultiByteStr.Length, (byte[]) null, out lpUsedDefaultChar);
       int num2 = 7;
-      ushort num3;
-      int num4;
+      ushort num3 = 0;
+      int num4 = 0;
       while (true)
       {
         switch (num2)
@@ -140,8 +140,8 @@ label_2:
       byte[] lpMultiByteStr = new byte[2];
       ushort[] lpWideCharStr = new ushort[1];
       int num1 = 2;
-      int cbMultiByte;
-      int num2;
+      int cbMultiByte = 0;
+      int num2 = 0;
       while (true)
       {
         switch (num1)
@@ -415,9 +415,9 @@ label_20:
 label_2:
       int startIndex = 0;
       int num1 = 3;
-      int num2;
-      bool flag;
-      IntColor intColor;
+      int num2 = 0;
+      bool flag = false;
+      IntColor intColor = default(IntColor);
       while (true)
       {
         switch (num1)
@@ -547,8 +547,8 @@ label_2:
       string str = "Font Converter";
       object[] customAttributes = Assembly.GetEntryAssembly().GetCustomAttributes(typeof (AssemblyProductAttribute), false);
       int num = 7;
-      string execFileName;
-      int length;
+      string execFileName = "";
+      int length = 0;
       while (true)
       {
         switch (num)

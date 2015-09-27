@@ -25,7 +25,7 @@ namespace NintendoWare.Font
     {
       BitmapFile.BITMAPHEADER bitmapheader = new BitmapFile.BITMAPHEADER();
       BinaryFile binaryFile = BinaryFile.Open(this.m_sb, FileMode.Open, FileAccess.Read);
-      ImageBase imageBase;
+      ImageBase imageBase = null;
       try
       {
 label_3:
@@ -35,12 +35,12 @@ label_3:
         this.a(bitmapheader);
         bool flag1 = BitmapFile.a((int) bitmapheader.bmih.biBitCount);
         int num1 = 2;
-        bool flag2;
-        int height;
-        int count;
-        byte[] numArray;
-        int num2;
-        int num3;
+        bool flag2 = false;
+        int height = 0;
+        int count = 0;
+        byte[] numArray = null;
+        int num2 = 0;
+        int num3 = 0;
         while (true)
         {
           switch (num1)
@@ -182,14 +182,14 @@ label_2:
       BITMAPFILEHEADER bitmapfileheader = new BITMAPFILEHEADER();
       IndexImage indexImage = image as IndexImage;
       int num2 = 10;
-      int length;
-      byte[] numArray;
-      int index1;
-      RGBQUAD[] array;
-      int num3;
-      int num4;
-      BITMAPINFOHEADER bitmapinfoheader;
-      ByteOrderBinaryWriter bw;
+      int length = 0;
+      byte[] numArray = null;
+      int index1 = 0;
+      RGBQUAD[] array = null;
+      int num3 = 0;
+      int num4 = 0;
+      BITMAPINFOHEADER bitmapinfoheader = default(BITMAPINFOHEADER);
+      ByteOrderBinaryWriter bw = null;
       while (true)
       {
         switch (num2)
@@ -285,8 +285,8 @@ label_10:
         bw.Write((object) bitmapfileheader);
         bw.Write((object) bitmapinfoheader);
         int num6 = 3;
-        int count;
-        int num7;
+        int count = 0;
+        int num7 = 0;
         while (true)
         {
           switch (num6)
@@ -568,8 +568,8 @@ label_8:
     private void b(BitmapFile.BITMAPHEADER A_0)
     {
       int num1 = 13;
-      int num2;
-      int num3;
+      int num2 = 0;
+      int num3 = 0;
       while (true)
       {
         switch (num1)

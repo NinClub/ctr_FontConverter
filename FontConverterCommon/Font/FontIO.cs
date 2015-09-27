@@ -14,7 +14,7 @@ namespace NintendoWare.Font
     public static void ValidateOrderFile(string file)
     {
       int num = 3;
-      GlyphOrder glyphOrder;
+      GlyphOrder glyphOrder = null;
       while (true)
       {
         switch (num)
@@ -62,7 +62,7 @@ label_9:
     public static void ValidateOutputPath(string file)
     {
       int num = 0;
-      string directoryName;
+      string directoryName = "";
       while (true)
       {
         switch (num)

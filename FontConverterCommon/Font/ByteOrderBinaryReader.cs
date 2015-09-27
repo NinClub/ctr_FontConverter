@@ -135,13 +135,13 @@ namespace NintendoWare.Font
     private object a(FieldInfo A_0, Type A_1)
     {
       int num = 1;
-      int index1;
-      Array instance;
-      MarshalAsAttribute marshalAsAttribute;
-      object obj1;
-      FieldInfo[] fields;
-      int index2;
-      Type elementType;
+      int index1 = 0;
+      Array instance = null;
+      MarshalAsAttribute marshalAsAttribute = null;
+      object obj1 = null;
+      FieldInfo[] fields = null;
+      int index2 = 0;
+      Type elementType = null;
       while (true)
       {
         switch (num)
@@ -316,18 +316,18 @@ label_18:
     private void a(Type A_0, Array A_1)
     {
       int num = 34;
-      int[] numArray1;
-      int index1;
-      ushort[] numArray2;
-      int index2;
-      byte[] numArray3;
-      int index3;
-      uint[] numArray4;
-      int index4;
-      short[] numArray5;
-      int index5;
-      sbyte[] numArray6;
-      int index6;
+      int[] numArray1 = null;
+      int index1 = 0;
+      ushort[] numArray2 = null;
+      int index2 = 0;
+      byte[] numArray3 = null;
+      int index3 = 0;
+      uint[] numArray4 = null;
+      int index4 = 0;
+      short[] numArray5 = null;
+      int index5 = 0;
+      sbyte[] numArray6 = null;
+      int index6 = 0;
       while (true)
       {
         switch (num)

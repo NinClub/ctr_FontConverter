@@ -34,9 +34,9 @@ namespace NintendoWare.Font
     public void SetGrayScaleTable(int bpp)
     {
       int num1 = 6;
-      int num2;
-      int index;
-      IntColor[] table;
+      int num2 = 0;
+      int index = 0;
+      IntColor[] table = null;
       while (true)
       {
         switch (num1)
@@ -106,7 +106,7 @@ label_11:
     {
       if (1 == 0)
         ;
-      return (uint) this.a[(IntPtr) this.GetColor(x, y)];
+      return (uint) this.a[/*(IntPtr) */this.GetColor(x, y)];
     }
 
     public override void Extract(ImageBase image, int x, int y, int width, int height)
