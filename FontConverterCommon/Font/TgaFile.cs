@@ -12,8 +12,8 @@ namespace NintendoWare.Font
 {
   public class TgaFile
   {
-    private const string a = "TRUEVISION-XFILE.\0";
-    private const string b = "fontcvtr output.";
+    private const string m_sa = "TRUEVISION-XFILE.\0";
+    private const string m_sb = "fontcvtr output.";
     private string c;
 
     public TgaFile(string fname)

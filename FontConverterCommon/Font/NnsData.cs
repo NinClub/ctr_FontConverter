@@ -11,14 +11,14 @@ namespace NintendoWare.Font
 {
   public class NnsData
   {
-    private readonly NnsData.BlockMap a = new NnsData.BlockMap();
+    private readonly NnsData.BlockMap m_a = new NnsData.BlockMap();
     private BinaryFileHeader b;
 
     protected NnsData.BlockMap Blocks
     {
       get
       {
-        return this.a;
+        return this.m_a;
       }
     }
 
@@ -58,7 +58,7 @@ namespace NintendoWare.Font
           default:
             if (1 == 0)
               ;
-            if (this.a.TryGetValue(id, out blockList))
+            if (this.m_a.TryGetValue(id, out blockList))
             {
               num = 1;
               continue;
@@ -75,7 +75,7 @@ label_9:
     public int GetNumBlock(Signature32 id)
     {
       NnsData.BlockList blockList;
-      if (this.a.TryGetValue(id, out blockList))
+      if (this.m_a.TryGetValue(id, out blockList))
         return blockList.Count;
       if (1 == 0)
         ;
@@ -121,7 +121,7 @@ label_9:
             }
             goto label_9;
           default:
-            if (this.a.TryGetValue(id, out blockList))
+            if (this.m_a.TryGetValue(id, out blockList))
             {
               num = 0;
               continue;
@@ -150,7 +150,7 @@ label_9:
         {
           case 0:
             blockList1 = new NnsData.BlockList();
-            this.a.Add(A_0, blockList1);
+            this.m_a.Add(A_0, blockList1);
             num = 1;
             continue;
           case 1:
@@ -159,7 +159,7 @@ label_9:
             goto label_5;
           default:
             NnsData.BlockList blockList2;
-            if (!this.a.TryGetValue(A_0, out blockList2))
+            if (!this.m_a.TryGetValue(A_0, out blockList2))
             {
               num = 0;
               continue;

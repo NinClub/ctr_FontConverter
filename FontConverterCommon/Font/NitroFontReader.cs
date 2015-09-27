@@ -13,11 +13,11 @@ namespace NintendoWare.Font
 {
   public class NitroFontReader : FontReader
   {
-    private readonly string a;
+    private readonly string m_sa;
 
     public NitroFontReader(string file)
     {
-      this.a = file;
+      this.m_sa = file;
     }
 
     public override void ReadFontData(FontData fontData, CharFilter filter)
@@ -28,7 +28,7 @@ label_2:
       G2dFont g2dFont = new G2dFont();
       ProgressControl.GetInstance().SetStatusString(string.Format(Strings.IDS_STATUS_READ_NITRO, (object) "bcfnt"));
       ProgressControl.GetInstance().ResetProgressBarPos();
-      NitroFontReader.a(this.a, g2dFont);
+      NitroFontReader.a(this.m_sa, g2dFont);
       int num = 2;
       while (true)
       {
@@ -57,7 +57,7 @@ label_7:
 
     public override void ValidateInput()
     {
-      NitroFontReader.a(this.a);
+      NitroFontReader.a(this.m_sa);
     }
 
     private static ImageBase.Pixel a(uint A_0)

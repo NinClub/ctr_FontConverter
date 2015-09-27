@@ -12,7 +12,7 @@ namespace NintendoWare.Font
 {
   public class FontData
   {
-    private readonly GlyphList a = new GlyphList();
+    private readonly GlyphList m_a = new GlyphList();
     private bool b;
     private bool c;
 
@@ -89,7 +89,7 @@ namespace NintendoWare.Font
 
     public GlyphList GetGlyphList()
     {
-      return this.a;
+      return this.m_a;
     }
 
     public void ReflectGlyph()
@@ -227,7 +227,7 @@ label_52:
               A_0_2 = int.MinValue;
               A_0_3 = 0;
               A_0_4 = 0;
-              enumerator = this.a.GetEnum().GetEnumerator();
+              enumerator = this.m_a.GetEnum().GetEnumerator();
               num1 = 2;
               continue;
             }
@@ -312,7 +312,7 @@ label_52:
             num1 = 6;
             continue;
           default:
-            if (this.a.GetNum() == 0)
+            if (this.m_a.GetNum() == 0)
             {
               num1 = 5;
               continue;
@@ -327,7 +327,7 @@ label_15:
 label_41:
       throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_NO_GLYPH);
 label_56:
-      this.a.SortByCode();
+      this.m_a.SortByCode();
     }
 
     private static void a(ref int A_0, int A_1)

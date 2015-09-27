@@ -12,7 +12,7 @@ namespace NintendoWare.Font
 {
   public class RasterLetterer : Letterer
   {
-    private const uint a = 0U;
+    private const uint m_ua = 0U;
     private const uint b = 16777215U;
     private const uint c = 16711680U;
     private IntPtr d;

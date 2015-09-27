@@ -14,7 +14,7 @@ namespace NintendoWare.Font
   public class GlyphGroups : HandlerBase
   {
     private readonly GlyphGroups.GroupList i = new GlyphGroups.GroupList();
-    private const string a = "glyph-groups";
+    private const string m_sa = "glyph-groups";
     private const string b = "body";
     private const string c = "group";
     private const string d = "sp";

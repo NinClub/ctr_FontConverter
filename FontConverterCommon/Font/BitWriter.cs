@@ -10,7 +10,7 @@ namespace NintendoWare.Font
 {
   public class BitWriter : IDisposable
   {
-    private int a;
+    private int m_na;
     private byte[] b;
     private int c;
     private byte d;
@@ -18,7 +18,7 @@ namespace NintendoWare.Font
     public BitWriter(byte[] buf)
     {
       this.b = buf;
-      this.a = 8;
+      this.m_na = 8;
       this.d = (byte) 0;
     }
 
@@ -29,7 +29,7 @@ namespace NintendoWare.Font
 
     public void Flush()
     {
-      if (this.a >= 8)
+      if (this.m_na >= 8)
         return;
       this.a();
     }
@@ -100,18 +100,18 @@ label_7:;
 
     public void Skip(int bits)
     {
-      if (bits > this.a)
+      if (bits > this.m_na)
       {
-        bits -= this.a;
+        bits -= this.m_na;
         this.c += bits / 8;
-        this.a = 8 - bits % 8;
+        this.m_na = 8 - bits % 8;
         this.d = this.b[this.c];
       }
       else
       {
         if (1 == 0)
           ;
-        this.a -= bits;
+        this.m_na -= bits;
       }
     }
 
@@ -121,7 +121,7 @@ label_7:;
         ;
       this.b[this.c++] = this.d;
       this.d = (byte) 0;
-      this.a = 8;
+      this.m_na = 8;
     }
 
     private void a(int A_0, byte A_1)
@@ -136,7 +136,7 @@ label_7:;
           case 1:
             goto label_5;
           case 2:
-            if (this.a <= 0)
+            if (this.m_na <= 0)
             {
               num = 4;
               continue;
@@ -147,14 +147,14 @@ label_7:;
             num = 1;
             continue;
           default:
-            if (this.a < A_0)
+            if (this.m_na < A_0)
             {
               num = 0;
               continue;
             }
             A_1 &= (byte) ((int) byte.MaxValue >> 8 - A_0);
-            this.d |= (byte) ((uint) A_1 << this.a - A_0);
-            this.a -= A_0;
+            this.d |= (byte) ((uint) A_1 << this.m_na - A_0);
+            this.m_na -= A_0;
             if (1 == 0)
               ;
             num = 2;
@@ -166,8 +166,8 @@ label_5:
 label_10:
       return;
 label_11:
-      int A_0_1 = A_0 - this.a;
-      this.a(this.a, (byte) ((uint) A_1 >> A_0_1));
+      int A_0_1 = A_0 - this.m_na;
+      this.a(this.m_na, (byte) ((uint) A_1 >> A_0_1));
       this.a(A_0_1, A_1);
     }
   }

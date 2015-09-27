@@ -14,15 +14,15 @@ namespace NintendoWare.Font
 {
   public class ByteOrderBinaryWriter : IDisposable
   {
-    private BinaryWriter a;
-    private byte[] b;
+    private BinaryWriter m_a;
+    private byte[] m_ub;
     private bool c;
 
     public Stream BaseStream
     {
       get
       {
-        return this.a.BaseStream;
+        return this.m_a.BaseStream;
       }
     }
 
@@ -32,39 +32,39 @@ namespace NintendoWare.Font
         throw new ArgumentNullException("output");
       if (!output.CanWrite)
         throw new ArgumentException("output not CanWrite");
-      this.a = new BinaryWriter(output);
-      this.b = new byte[8];
+      this.m_a = new BinaryWriter(output);
+      this.m_ub = new byte[8];
       this.c = isLittleEndian;
     }
 
     public void Dispose()
     {
-      this.a.Close();
+      this.m_a.Close();
     }
 
     public void Flush()
     {
-      this.a.Flush();
+      this.m_a.Flush();
     }
 
     public long Seek(int offset, SeekOrigin origin)
     {
-      return this.a.Seek(offset, origin);
+      return this.m_a.Seek(offset, origin);
     }
 
     public void Write(bool value)
     {
-      this.a.Write(value);
+      this.m_a.Write(value);
     }
 
     public void Write(byte value)
     {
-      this.a.Write(value);
+      this.m_a.Write(value);
     }
 
     public void Write(sbyte value)
     {
-      this.a.Write(value);
+      this.m_a.Write(value);
     }
 
     public void Write(byte[] buffer)
@@ -75,12 +75,12 @@ namespace NintendoWare.Font
           ;
         throw new ArgumentNullException("buffer");
       }
-      this.a.Write(buffer, 0, buffer.Length);
+      this.m_a.Write(buffer, 0, buffer.Length);
     }
 
     public void Write(byte[] buffer, int index, int count)
     {
-      this.a.Write(buffer, index, count);
+      this.m_a.Write(buffer, index, count);
     }
 
     public void Write(short value)
@@ -94,13 +94,13 @@ namespace NintendoWare.Font
       {
         if (1 == 0)
           ;
-        this.a.Write(value);
+        this.m_a.Write(value);
       }
       else
       {
-        this.b[0] = (byte) ((uint) value >> 8);
-        this.b[1] = (byte) value;
-        this.a.Write(this.b, 0, 2);
+        this.m_ub[0] = (byte) ((uint) value >> 8);
+        this.m_ub[1] = (byte) value;
+        this.m_a.Write(this.m_ub, 0, 2);
       }
     }
 
@@ -113,17 +113,17 @@ namespace NintendoWare.Font
     {
       if (this.c)
       {
-        this.a.Write(value);
+        this.m_a.Write(value);
       }
       else
       {
         if (1 == 0)
           ;
-        this.b[0] = (byte) (value >> 24);
-        this.b[1] = (byte) (value >> 16);
-        this.b[2] = (byte) (value >> 8);
-        this.b[3] = (byte) value;
-        this.a.Write(this.b, 0, 4);
+        this.m_ub[0] = (byte) (value >> 24);
+        this.m_ub[1] = (byte) (value >> 16);
+        this.m_ub[2] = (byte) (value >> 8);
+        this.m_ub[3] = (byte) value;
+        this.m_a.Write(this.m_ub, 0, 4);
       }
     }
 
@@ -136,21 +136,21 @@ namespace NintendoWare.Font
     {
       if (this.c)
       {
-        this.a.Write(value);
+        this.m_a.Write(value);
       }
       else
       {
         if (1 == 0)
           ;
-        this.b[0] = (byte) (value >> 56);
-        this.b[1] = (byte) (value >> 48);
-        this.b[2] = (byte) (value >> 40);
-        this.b[3] = (byte) (value >> 32);
-        this.b[4] = (byte) (value >> 24);
-        this.b[5] = (byte) (value >> 16);
-        this.b[6] = (byte) (value >> 8);
-        this.b[7] = (byte) value;
-        this.a.Write(this.b, 0, 8);
+        this.m_ub[0] = (byte) (value >> 56);
+        this.m_ub[1] = (byte) (value >> 48);
+        this.m_ub[2] = (byte) (value >> 40);
+        this.m_ub[3] = (byte) (value >> 32);
+        this.m_ub[4] = (byte) (value >> 24);
+        this.m_ub[5] = (byte) (value >> 16);
+        this.m_ub[6] = (byte) (value >> 8);
+        this.m_ub[7] = (byte) value;
+        this.m_a.Write(this.m_ub, 0, 8);
       }
     }
 
@@ -164,9 +164,9 @@ namespace NintendoWare.Font
           case 1:
             goto label_5;
           case 2:
-            this.b[0] = (byte) value;
-            this.b[1] = (byte) (value >> 8);
-            this.b[2] = (byte) (value >> 16);
+            this.m_ub[0] = (byte) value;
+            this.m_ub[1] = (byte) (value >> 8);
+            this.m_ub[2] = (byte) (value >> 16);
             num = 3;
             continue;
           case 3:
@@ -177,9 +177,9 @@ namespace NintendoWare.Font
               num = 2;
               continue;
             }
-            this.b[0] = (byte) (value >> 16);
-            this.b[1] = (byte) (value >> 8);
-            this.b[2] = (byte) value;
+            this.m_ub[0] = (byte) (value >> 16);
+            this.m_ub[1] = (byte) (value >> 8);
+            this.m_ub[2] = (byte) value;
             num = 1;
             continue;
         }
@@ -188,7 +188,7 @@ label_5:
       if (1 == 0)
         ;
 label_7:
-      this.a.Write(this.b, 0, 3);
+      this.m_a.Write(this.m_ub, 0, 3);
     }
 
     public void Write(object obj)

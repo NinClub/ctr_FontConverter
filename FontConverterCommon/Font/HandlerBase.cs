@@ -11,17 +11,17 @@ namespace NintendoWare.Font
 {
   public abstract class HandlerBase
   {
-    private string a;
+    private string m_sa;
 
     protected string Error
     {
       get
       {
-        return this.a;
+        return this.m_sa;
       }
       set
       {
-        this.a = value;
+        this.m_sa = value;
       }
     }
 
@@ -180,11 +180,11 @@ label_2:
         switch (num)
         {
           case 0:
-            this.a = str;
+            this.m_sa = str;
             num = 2;
             continue;
           case 1:
-            if (this.a == null)
+            if (this.m_sa == null)
             {
               num = 0;
               continue;

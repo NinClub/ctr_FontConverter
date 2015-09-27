@@ -13,15 +13,15 @@ namespace NintendoWare.Font
 {
   public class ByteOrderBinaryReader : IDisposable
   {
-    private readonly byte[] b = new byte[8];
-    private readonly BinaryReader a;
+    private readonly byte[] m_ub = new byte[8];
+    private readonly BinaryReader m_a;
     private bool c;
 
     public Stream BaseStream
     {
       get
       {
-        return this.a.BaseStream;
+        return this.m_a.BaseStream;
       }
     }
 
@@ -29,23 +29,23 @@ namespace NintendoWare.Font
     {
       if (input == null)
         throw new ArgumentNullException("input");
-      this.a = new BinaryReader(input);
+      this.m_a = new BinaryReader(input);
       this.c = isLittleEndian;
     }
 
     public void Dispose()
     {
-      this.a.Close();
+      this.m_a.Close();
     }
 
     public byte ReadByte()
     {
-      return this.a.ReadByte();
+      return this.m_a.ReadByte();
     }
 
     public sbyte ReadSByte()
     {
-      return this.a.ReadSByte();
+      return this.m_a.ReadSByte();
     }
 
     public short ReadInt16()
@@ -59,10 +59,10 @@ namespace NintendoWare.Font
       {
         if (1 == 0)
           ;
-        return this.a.ReadUInt16();
+        return this.m_a.ReadUInt16();
       }
-      this.a.Read(this.b, 0, 2);
-      return (ushort) ((uint) this.b[0] << 8 | (uint) this.b[1]);
+      this.m_a.Read(this.m_ub, 0, 2);
+      return (ushort) ((uint) this.m_ub[0] << 8 | (uint) this.m_ub[1]);
     }
 
     public int ReadInt32()
@@ -76,10 +76,10 @@ namespace NintendoWare.Font
       {
         if (1 == 0)
           ;
-        return this.a.ReadUInt32();
+        return this.m_a.ReadUInt32();
       }
-      this.a.Read(this.b, 0, 4);
-      return (uint) ((int) this.b[0] << 24 | (int) this.b[1] << 16 | (int) this.b[2] << 8) | (uint) this.b[3];
+      this.m_a.Read(this.m_ub, 0, 4);
+      return (uint) ((int) this.m_ub[0] << 24 | (int) this.m_ub[1] << 16 | (int) this.m_ub[2] << 8) | (uint) this.m_ub[3];
     }
 
     public long ReadInt64()
@@ -90,21 +90,21 @@ namespace NintendoWare.Font
     public ulong ReadUInt64()
     {
       if (this.c)
-        return this.a.ReadUInt64();
+        return this.m_a.ReadUInt64();
       if (1 == 0)
         ;
-      this.a.Read(this.b, 0, 8);
-      return (ulong) ((uint) ((int) this.b[4] << 24 | (int) this.b[5] << 16 | (int) this.b[6] << 8) | (uint) this.b[7]) << 32 | (ulong) ((uint) ((int) this.b[0] << 24 | (int) this.b[1] << 16 | (int) this.b[2] << 8) | (uint) this.b[3]);
+      this.m_a.Read(this.m_ub, 0, 8);
+      return (ulong) ((uint) ((int) this.m_ub[4] << 24 | (int) this.m_ub[5] << 16 | (int) this.m_ub[6] << 8) | (uint) this.m_ub[7]) << 32 | (ulong) ((uint) ((int) this.m_ub[0] << 24 | (int) this.m_ub[1] << 16 | (int) this.m_ub[2] << 8) | (uint) this.m_ub[3]);
     }
 
     public uint Read24Bits()
     {
-      this.a.Read(this.b, 0, 3);
+      this.m_a.Read(this.m_ub, 0, 3);
       if (this.c)
-        return (uint) ((int) this.b[2] << 16 | (int) this.b[1] << 8) | (uint) this.b[0];
+        return (uint) ((int) this.m_ub[2] << 16 | (int) this.m_ub[1] << 8) | (uint) this.m_ub[0];
       if (1 == 0)
         ;
-      return (uint) ((int) this.b[0] << 16 | (int) this.b[1] << 8) | (uint) this.b[2];
+      return (uint) ((int) this.m_ub[0] << 16 | (int) this.m_ub[1] << 8) | (uint) this.m_ub[2];
     }
 
     public void Read<T>(out T obj)
@@ -114,17 +114,17 @@ namespace NintendoWare.Font
 
     public int Read(byte[] buffer)
     {
-      return this.a.Read(buffer, 0, buffer.Length);
+      return this.m_a.Read(buffer, 0, buffer.Length);
     }
 
     public int Read(byte[] buffer, int index, int count)
     {
-      return this.a.Read(buffer, index, count);
+      return this.m_a.Read(buffer, index, count);
     }
 
     public long Seek(int offset, SeekOrigin origin)
     {
-      return this.a.BaseStream.Seek((long) offset, origin);
+      return this.m_a.BaseStream.Seek((long) offset, origin);
     }
 
     private object b(Type A_0)

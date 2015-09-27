@@ -11,14 +11,14 @@ namespace NintendoWare.Font
 {
   public class ImageFontWriter : FontWriter
   {
-    private readonly string[] a = new string[3]
+    private readonly string[] m_sa = new string[3]
     {
       null,
       "bmp",
       "tga"
     };
-    private readonly string b;
-    private readonly string c;
+    private readonly string m_sb;
+    private readonly string m_sc;
     private readonly ImageFileFormat d;
     private readonly bool e;
     private readonly int f;
@@ -43,8 +43,8 @@ namespace NintendoWare.Font
 
     public ImageFontWriter(string file, string order, ImageFileFormat format, bool isDrawGrid, int cellWidth, int cellHeight, int marginLeft, int marginTop, int marginRight, int marginBottom, uint colorGrid, uint colorMargin, uint colorWidthBar, uint colorNullCell, uint colorBackground)
     {
-      this.b = file;
-      this.c = order;
+      this.m_sb = file;
+      this.m_sc = order;
       this.d = format;
       this.e = isDrawGrid;
       this.f = marginLeft;
@@ -91,7 +91,7 @@ label_2:
             num = 15;
             continue;
           case 4:
-            b = Path.GetExtension(this.b);
+            b = Path.GetExtension(this.m_sb);
             num = 12;
             continue;
           case 5:
@@ -124,12 +124,12 @@ label_2:
           case 11:
             if (1 == 0)
               ;
-            if (index >= this.a.Length)
+            if (index >= this.m_sa.Length)
             {
               num = 10;
               continue;
             }
-            a = this.a[index];
+            a = this.m_sa[index];
             num = 14;
             continue;
           case 12:
@@ -167,7 +167,7 @@ label_13:
       ProgressControl.GetInstance().ResetProgressBarPos();
       ImageBase image1 = this.c(fontData, order);
       ProgressControl.GetInstance().SetStatusString(Strings.IDS_STATUS_WRITE_BMP_FILE);
-      new BitmapFile(this.b).Save(image1);
+      new BitmapFile(this.m_sb).Save(image1);
       return;
 label_15:
       throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_UNKNOWN_IMAGE_EXT);
@@ -176,7 +176,7 @@ label_16:
       ProgressControl.GetInstance().ResetProgressBarPos();
       ImageBase image2 = this.c(fontData, order);
       ProgressControl.GetInstance().SetStatusString(Strings.IDS_STATUS_WRITE_TGA_FILE);
-      new TgaFile(this.b).Save(image2);
+      new TgaFile(this.m_sb).Save(image2);
       return;
 label_29:
       throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_UNKNOWN_IMAGE_FORMAT_INT);
@@ -184,14 +184,14 @@ label_29:
 
     public override void GetGlyphOrder(GlyphOrder order)
     {
-      order.Load(this.c);
+      order.Load(this.m_sc);
     }
 
     public override void ValidateInput()
     {
 label_2:
-      FontIO.ValidateOutputPath(this.b);
-      FontIO.ValidateOrderFile(this.c);
+      FontIO.ValidateOutputPath(this.m_sb);
+      FontIO.ValidateOrderFile(this.m_sc);
       if (1 == 0)
         ;
       int num = 2;

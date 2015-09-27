@@ -11,7 +11,7 @@ namespace NintendoWare.Font
 {
   public class VectorLetterer : Letterer
   {
-    private const int a = 17;
+    private const int m_na = 17;
     private const int b = 65;
     private bool c;
 

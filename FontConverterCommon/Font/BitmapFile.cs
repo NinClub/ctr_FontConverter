@@ -13,18 +13,18 @@ namespace NintendoWare.Font
 {
   public class BitmapFile
   {
-    private const ushort a = (ushort) 19778;
-    private string b;
+    private const ushort m_ua = (ushort) 19778;
+    private string m_sb;
 
     public BitmapFile(string fname)
     {
-      this.b = fname;
+      this.m_sb = fname;
     }
 
     public ImageBase Load()
     {
       BitmapFile.BITMAPHEADER bitmapheader = new BitmapFile.BITMAPHEADER();
-      BinaryFile binaryFile = BinaryFile.Open(this.b, FileMode.Open, FileAccess.Read);
+      BinaryFile binaryFile = BinaryFile.Open(this.m_sb, FileMode.Open, FileAccess.Read);
       ImageBase imageBase;
       try
       {
@@ -223,7 +223,7 @@ label_2:
           case 2:
             numArray = new byte[length];
             image.Extract(numArray, 4);
-            bw = new ByteOrderBinaryWriter((Stream) BinaryFile.Open(this.b, FileMode.Create, FileAccess.Write), true);
+            bw = new ByteOrderBinaryWriter((Stream) BinaryFile.Open(this.m_sb, FileMode.Create, FileAccess.Write), true);
             num2 = 9;
             continue;
           case 3:
@@ -365,7 +365,7 @@ label_26:;
     public bool IsIndex()
     {
       BitmapFile.BITMAPHEADER bitmapheader = new BitmapFile.BITMAPHEADER();
-      BinaryFile binaryFile = BinaryFile.Open(this.b, FileMode.Open, FileAccess.Read);
+      BinaryFile binaryFile = BinaryFile.Open(this.m_sb, FileMode.Open, FileAccess.Read);
       try
       {
         this.a(new ByteOrderBinaryReader((Stream) binaryFile, true), bitmapheader);
@@ -403,7 +403,7 @@ label_7:;
     public bool HasValidIdentifier()
     {
       BitmapFile.BITMAPHEADER A_1 = new BitmapFile.BITMAPHEADER();
-      BinaryFile binaryFile = BinaryFile.Open(this.b, FileMode.Open, FileAccess.Read);
+      BinaryFile binaryFile = BinaryFile.Open(this.m_sb, FileMode.Open, FileAccess.Read);
       try
       {
         this.a(new ByteOrderBinaryReader((Stream) binaryFile, true), A_1);
@@ -440,7 +440,7 @@ label_8:;
     public bool IsInvalid()
     {
       BitmapFile.BITMAPHEADER bitmapheader = new BitmapFile.BITMAPHEADER();
-      BinaryFile binaryFile = BinaryFile.Open(this.b, FileMode.Open, FileAccess.Read);
+      BinaryFile binaryFile = BinaryFile.Open(this.m_sb, FileMode.Open, FileAccess.Read);
       try
       {
         if (1 == 0)
@@ -620,7 +620,7 @@ label_8:
             num1 = 15;
             continue;
           case 9:
-            GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_ILLEGAL_IMAGE_SIZE, (object) this.b, (object) A_0.bmih.biSizeImage, (object) num2);
+            GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_ILLEGAL_IMAGE_SIZE, (object) this.m_sb, (object) A_0.bmih.biSizeImage, (object) num2);
             num1 = 0;
             continue;
           case 10:
@@ -678,9 +678,9 @@ label_29:
 label_32:
       return;
 label_20:
-      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_ILLEGAL_IMAGE_SIZE, (object) this.b, (object) A_0.bmih.biWidth, (object) A_0.bmih.biHeight);
+      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_ILLEGAL_IMAGE_SIZE, (object) this.m_sb, (object) A_0.bmih.biWidth, (object) A_0.bmih.biHeight);
 label_22:
-      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_INVALID_BMP_FILE, (object) this.b);
+      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_INVALID_BMP_FILE, (object) this.m_sb);
     }
 
     private void a(BitmapFile.BITMAPHEADER A_0)
@@ -764,9 +764,9 @@ label_22:
 label_7:
       if (1 == 0)
         ;
-      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_BMP_UNSUPPORTED_BPP, (object) this.b, (object) A_0.bmih.biBitCount);
+      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_BMP_UNSUPPORTED_BPP, (object) this.m_sb, (object) A_0.bmih.biBitCount);
 label_12:
-      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_UNSUPPORTED_BMP, (object) this.b);
+      throw GlCm.ErrMsg(ErrorType.Bmp, Strings.IDS_ERR_UNSUPPORTED_BMP, (object) this.m_sb);
 label_25:;
     }
 

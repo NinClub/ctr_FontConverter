@@ -15,7 +15,7 @@ namespace NintendoWare.Font
     private readonly List<ushort> n = new List<ushort>();
     private readonly bool[] o = new bool[65536];
     public const ushort NullGlyph = (ushort) 65535;
-    private const int a = 65536;
+    private const int m_na = 65536;
     private const string b = "letter-order";
     private const string c = "area";
     private const string d = "body";

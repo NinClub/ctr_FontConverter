@@ -8,14 +8,14 @@ namespace NintendoWare.Font
 {
   public class BitReader
   {
-    private byte[] a;
+    private byte[] m_ua;
     private byte b;
     private int c;
     private int d;
 
     public BitReader(byte[] buf)
     {
-      this.a = buf;
+      this.m_ua = buf;
       this.c = 0;
     }
 
@@ -96,7 +96,7 @@ label_6:
     {
       if (1 == 0)
         ;
-      this.b = this.a[this.d++];
+      this.b = this.m_ua[this.d++];
       this.c = 8;
     }
 

@@ -20,12 +20,12 @@ namespace NintendoWare.Font
     private readonly IntArray r = new IntArray();
     private readonly NitroFontWriter.TGLPInfo s = new NitroFontWriter.TGLPInfo();
     public const ushort UseDefault = (ushort) 65535;
-    private const int a = 80;
-    private const int b = 40;
-    private const string c = "*";
-    private readonly string d;
-    private readonly string e;
-    private readonly ushort f;
+    private const int m_na = 80;
+    private const int m_nb = 40;
+    private const string m_sc = "*";
+    private readonly string m_sd;
+    private readonly string m_se;
+    private readonly ushort m_uf;
     private readonly int g;
     private readonly int h;
     private readonly int i;
@@ -41,9 +41,9 @@ namespace NintendoWare.Font
 
     public NitroFontWriter(string file, string groupsFile, GlyphDataType type, ushort alter, int linefeed, int width, int left, int right, CharEncoding encoding, int sheetWidth, int sheetHeight)
     {
-      this.d = file;
-      this.e = groupsFile;
-      this.f = alter;
+      this.m_sd = file;
+      this.m_se = groupsFile;
+      this.m_uf = alter;
       this.g = linefeed;
       this.i = left;
       this.h = width;
@@ -58,9 +58,9 @@ namespace NintendoWare.Font
 
     public NitroFontWriter(string file, string groupsFile, GlyphDataType type, ushort alter, int linefeed, int width, int left, int right, CharEncoding encoding, int sheetPixels)
     {
-      this.d = file;
-      this.e = groupsFile;
-      this.f = alter;
+      this.m_sd = file;
+      this.m_se = groupsFile;
+      this.m_uf = alter;
       this.g = linefeed;
       this.i = left;
       this.h = width;
@@ -222,7 +222,7 @@ label_37:
     public override void ValidateInput()
     {
 label_2:
-      FontIO.ValidateOutputPath(this.d);
+      FontIO.ValidateOutputPath(this.m_sd);
       int num1 = 31;
       while (true)
       {
@@ -319,14 +319,14 @@ label_2:
             }
             goto label_57;
           case 21:
-            if ((int) this.f == 0)
+            if ((int) this.m_uf == 0)
             {
               num1 = 8;
               continue;
             }
             goto label_33;
           case 22:
-            if ((int) this.f != (int) ushort.MaxValue)
+            if ((int) this.m_uf != (int) ushort.MaxValue)
             {
               num1 = 12;
               continue;
@@ -370,7 +370,7 @@ label_2:
             }
             goto label_66;
           case 31:
-            if (this.e != string.Empty)
+            if (this.m_se != string.Empty)
             {
               num1 = 6;
               continue;
@@ -416,12 +416,12 @@ label_2:
             num1 = 27;
             continue;
           case 42:
-            if (!FontIO.IsFileExists(this.e))
+            if (!FontIO.IsFileExists(this.m_se))
             {
               num1 = 28;
               continue;
             }
-            new GlyphGroups().Load(this.e);
+            new GlyphGroups().Load(this.m_se);
             num1 = 23;
             continue;
           default:
@@ -452,7 +452,7 @@ label_39:
 label_56:
       throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_OUTOFRANGE_DEFAULTLEFTSPACE, (object) this.i, (object) sbyte.MinValue, (object) sbyte.MaxValue);
 label_60:
-      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_FILE_NOT_EXISTS, (object) this.e);
+      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_FILE_NOT_EXISTS, (object) this.m_se);
 label_64:;
     }
 
@@ -2107,7 +2107,7 @@ label_132:
             continue;
           case 68:
             GlyphGroups glyphGroups = new GlyphGroups();
-            glyphGroups.Load(this.e);
+            glyphGroups.Load(this.m_se);
             groups = glyphGroups.GetGroups();
             num1 = 82;
             continue;
@@ -2237,9 +2237,9 @@ label_132:
                 num8 = 6;
               }
 label_263:
-              throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_LOCAL, (object) this.f, (object) this.t);
+              throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_LOCAL, (object) this.m_uf, (object) this.t);
 label_264:
-              throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_UNICODE, (object) this.f, (object) this.t);
+              throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_UNICODE, (object) this.m_uf, (object) this.t);
             }
             finally
             {
@@ -2436,7 +2436,7 @@ label_59:
             num1 = 53;
             continue;
           case 97:
-            num5 = this.f;
+            num5 = this.m_uf;
             num1 = 108;
             continue;
           case 98:
@@ -2598,7 +2598,7 @@ label_206:
             num1 = 18;
             continue;
           default:
-            if (this.e != string.Empty)
+            if (this.m_se != string.Empty)
             {
               num1 = 68;
               continue;
@@ -2610,11 +2610,11 @@ label_38:
       this.u = byCode1.GetIndex();
       return;
 label_304:
-      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_UNICODE, (object) this.f, (object) this.t);
+      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_UNICODE, (object) this.m_uf, (object) this.t);
 label_312:
       throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_TO_LOCAL, (object) uni, (object) uni);
 label_313:
-      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_LOCAL, (object) this.f, (object) this.t);
+      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_ALTER_NOT_INCLUDED_LOCAL, (object) this.m_uf, (object) this.t);
     }
 
     private void a(NitroFontWriter.SheetSurplus A_0, ref int A_1, ref int A_2)
@@ -4551,7 +4551,7 @@ label_2:
             goto label_2;
         }
         sig = signature32;
-        binaryFile = BinaryFile.Open(this.d, FileMode.Create, FileAccess.Write);
+        binaryFile = BinaryFile.Open(this.m_sd, FileMode.Create, FileAccess.Write);
         num1 = 3;
       }
 label_5:

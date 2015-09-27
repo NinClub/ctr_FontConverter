@@ -16,12 +16,12 @@ namespace NintendoWare.sdk
     private static byte i = (byte) 1;
     private static readonly TextWriter j = Console.Error;
     private static Util.HuffCompressionInfo k = new Util.HuffCompressionInfo();
-    private const int a = 128;
-    private const int b = 16;
-    private const int c = 32;
-    private const int d = 48;
-    private const int e = 64;
-    private const int f = 80;
+    private const int m_na = 128;
+    private const int m_nb = 16;
+    private const int m_nc = 32;
+    private const int m_nd = 48;
+    private const int m_ne = 64;
+    private const int m_nf = 80;
     private const int g = 240;
 
     [Conditional("DEBUG_PRINT")]

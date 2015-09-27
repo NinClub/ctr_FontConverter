@@ -12,7 +12,7 @@ namespace NintendoWare.Font
   public class Glyph : IEquatable<Glyph>
   {
     public const int WidthLineSplitError = 1;
-    private const int a = 0;
+    private const int m_na = 0;
     private readonly RgbImage b;
     private int c;
     private int d;

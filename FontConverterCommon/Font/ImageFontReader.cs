@@ -12,8 +12,8 @@ namespace NintendoWare.Font
   public class ImageFontReader : FontReader
   {
     protected static readonly COLORREF DnotTransparentColor = (COLORREF) 4278190080U;
-    private readonly string a;
-    private readonly string b;
+    private readonly string m_sa;
+    private readonly string m_sb;
     private readonly GlyphImageFormat c;
     private readonly bool d;
     private int e;
@@ -25,8 +25,8 @@ namespace NintendoWare.Font
 
     public ImageFontReader(string file, string order, GlyphImageFormat gif, bool isAntiLinear)
     {
-      this.a = file;
-      this.b = order;
+      this.m_sa = file;
+      this.m_sb = order;
       this.c = gif;
       this.d = isAntiLinear;
     }
@@ -51,11 +51,11 @@ label_2:
           case 0:
           case 4:
           case 12:
-            ImageBase A_1_2 = ImageFontReader.a(this.a, A_1_1);
+            ImageBase A_1_2 = ImageFontReader.a(this.m_sa, A_1_1);
             glyphOrder = new GlyphOrder();
             A_0_2 = new RgbImage();
             A_0_1 = new FontIO.ArrangeInfo();
-            glyphOrder.Load(this.b);
+            glyphOrder.Load(this.m_sb);
             A_5 = this.a(A_0_2, A_1_2);
             fontData.NullColor = new IntColor?(A_5);
             this.a((ImageBase) A_0_2, glyphOrder);
@@ -217,15 +217,15 @@ label_22:
             num1 = 1;
             continue;
           default:
-            if (!FontIO.IsFileExists(this.a))
+            if (!FontIO.IsFileExists(this.m_sa))
             {
               num1 = 13;
               continue;
             }
-            A_0 = ImageFontReader.a(this.a, this.a());
-            FontIO.ValidateOrderFile(this.b);
+            A_0 = ImageFontReader.a(this.m_sa, this.a());
+            FontIO.ValidateOrderFile(this.m_sb);
             glyphOrder = new GlyphOrder();
-            glyphOrder.Load(this.b);
+            glyphOrder.Load(this.m_sb);
             int width = A_0.Width;
             int height = A_0.Height;
             hnum = glyphOrder.GetHNum();
@@ -245,7 +245,7 @@ label_22:
 label_23:
       return;
 label_11:
-      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_FILE_NOT_EXISTS, (object) this.a);
+      throw GlCm.ErrMsg(ErrorType.Parameter, Strings.IDS_ERR_FILE_NOT_EXISTS, (object) this.m_sa);
     }
 
     private static int a(int A_0, int A_1, int A_2)
@@ -1103,7 +1103,7 @@ label_2:
         switch (num)
         {
           case 0:
-            ProgressControl.Warning(Strings.IDS_WARN_NON_WHITE_NULL, (object) (this.g * A_1 + this.g / 2), (object) (this.h * A_2 + this.h / 2), (object) this.b);
+            ProgressControl.Warning(Strings.IDS_WARN_NON_WHITE_NULL, (object) (this.g * A_1 + this.g / 2), (object) (this.h * A_2 + this.h / 2), (object) this.m_sb);
             num = 1;
             continue;
           case 1:
@@ -1651,8 +1651,8 @@ label_100:
     {
 label_2:
       ImageFileFormat imageFileFormat = ImageFileFormat.Ext;
-      BitmapFile bitmapFile = new BitmapFile(this.a);
-      TgaFile tgaFile = new TgaFile(this.a);
+      BitmapFile bitmapFile = new BitmapFile(this.m_sa);
+      TgaFile tgaFile = new TgaFile(this.m_sa);
       bool flag1 = bitmapFile.HasValidIdentifier();
       bool flag2 = tgaFile.HasValidIdentifier();
       int num = 2;

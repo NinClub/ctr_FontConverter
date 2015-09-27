@@ -13,7 +13,7 @@ namespace NintendoWare.Font
   public class CharFilter : HandlerBase
   {
     private CharFilter.OutputGlyphList i = new CharFilter.OutputGlyphList();
-    private const string a = "letter-list";
+    private const string m_sa = "letter-list";
     private const string b = "letter";
     private const string c = "body";
     private const string d = "code";

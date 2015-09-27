@@ -17,7 +17,7 @@ namespace NintendoWare.Font
 {
   public class GlCm
   {
-    private static GeneralException b = new GeneralException();
+    private static GeneralException s_b = new GeneralException();
     private static readonly uint[] c = new uint[5]
     {
       uint.MaxValue,
@@ -26,13 +26,13 @@ namespace NintendoWare.Font
       1252U,
       949U
     };
-    private const uint a = 4294967295U;
+    private const uint m_ua = 4294967295U;
     public const string VersionDebug = "";
 
     public static GeneralException ErrMsg(ErrorType type, string formatId, params object[] arg)
     {
-      GlCm.b.SetMsgFormat(type, formatId, arg);
-      return GlCm.b;
+      GlCm.s_b.SetMsgFormat(type, formatId, arg);
+      return GlCm.s_b;
     }
 
     public static ushort UnicodeToLocal(ushort uni)

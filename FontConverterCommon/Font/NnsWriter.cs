@@ -12,14 +12,14 @@ namespace NintendoWare.Font
   public class NnsWriter
   {
     private BinaryFileHeader b = new BinaryFileHeader();
-    private readonly ByteOrderBinaryWriter a;
+    private readonly ByteOrderBinaryWriter m_a;
     private uint c;
     private ushort d;
     private bool e;
 
     public NnsWriter(BinaryFile binaryFile)
     {
-      this.a = new ByteOrderBinaryWriter((Stream) binaryFile, true);
+      this.m_a = new ByteOrderBinaryWriter((Stream) binaryFile, true);
       this.c = 0U;
       this.d = (ushort) 0;
       this.e = false;
@@ -34,7 +34,7 @@ namespace NintendoWare.Font
       this.c = (uint) BinaryFileHeader.Length;
       this.d = (ushort) 0;
       this.e = true;
-      this.a.Seek((int) this.c, SeekOrigin.Begin);
+      this.m_a.Seek((int) this.c, SeekOrigin.Begin);
     }
 
     public void WriteNnsEnd()
@@ -45,8 +45,8 @@ namespace NintendoWare.Font
       this.b.FileSize = this.c;
       this.b.HeaderSize = (ushort) BinaryFileHeader.Length;
       this.b.DataBlocks = this.d;
-      this.a.Seek(0, SeekOrigin.Begin);
-      this.a.Write((object) this.b);
+      this.m_a.Seek(0, SeekOrigin.Begin);
+      this.m_a.Write((object) this.b);
       this.e = false;
     }
 
@@ -83,7 +83,7 @@ label_2:
               num2 = 2;
               continue;
             }
-            this.a.Write((byte) 0);
+            this.m_a.Write((byte) 0);
             ++num1;
             if (1 == 0)
               ;
@@ -108,14 +108,14 @@ label_8:;
         ;
       int blockContentsSize = A_1.GetBlockContentsSize((int) this.c + BinaryBlockHeader.Length);
       int num = GlCm.ROUND_UP(blockContentsSize, 4);
-      this.a.Write((object) new BinaryBlockHeader()
+      this.m_a.Write((object) new BinaryBlockHeader()
       {
         Kind = A_0,
         Size = (uint) (BinaryBlockHeader.Length + num)
       });
-      A_1.Write(this.a);
+      A_1.Write(this.m_a);
       this.WritePadding((uint) (num - blockContentsSize));
-      this.c = (uint) this.a.BaseStream.Position;
+      this.c = (uint) this.m_a.BaseStream.Position;
       ++this.d;
     }
   }

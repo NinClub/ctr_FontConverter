@@ -13,12 +13,12 @@ namespace NintendoWare.Font
 {
   public class G2dFont : NnsData
   {
-    private bool a;
+    private bool m_ba;
     private int b;
 
     public G2dFont()
     {
-      this.a = false;
+      this.m_ba = false;
       this.b = Marshal.SizeOf(typeof (CharWidths));
     }
 
@@ -36,7 +36,7 @@ namespace NintendoWare.Font
 
     public bool IsOldVer()
     {
-      return this.a;
+      return this.m_ba;
     }
 
     public void SetGlyphGroupsBlock(uint sheetSize, ushort glyphsPerSheet, ushort numSheet, ushort numSet, G2dFont.SheetSetList sheetSetList, IntArray compSheetSizes)
